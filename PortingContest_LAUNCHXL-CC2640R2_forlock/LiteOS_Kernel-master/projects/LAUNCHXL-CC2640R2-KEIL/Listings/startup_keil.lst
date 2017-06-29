@@ -1,0 +1,1268 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000         ; /*****************************************************
+                       *************************
+    2 00000000         ; *  Filename:       startup_keil.c
+    3 00000000         ; *  Revised:        $Date: 2016-09-21 10:57:23 +0200 (o
+                       n, 21 sep 2016) $
+    4 00000000         ; *  Revision:       $Revision: 17335 $
+    5 00000000         ; *
+    6 00000000         ; *  Description:    Startup code for CC26xx device fami
+                       ly for use with KEIL.
+    7 00000000         ; *
+    8 00000000         ; *  Copyright (C) 2015 Texas Instruments Incorporated -
+                        http://www.ti.com/
+    9 00000000         ; *
+   10 00000000         ; *
+   11 00000000         ; *  Redistribution and use in source and binary forms, 
+                       with or without
+   12 00000000         ; *  modification, are permitted provided that the follo
+                       wing conditions
+   13 00000000         ; *  are met:
+   14 00000000         ; *
+   15 00000000         ; *    Redistributions of source code must retain the ab
+                       ove copyright
+   16 00000000         ; *    notice, this list of conditions and the following
+                        disclaimer.
+   17 00000000         ; *
+   18 00000000         ; *    Redistributions in binary form must reproduce the
+                        above copyright
+   19 00000000         ; *    notice, this list of conditions and the following
+                        disclaimer in the
+   20 00000000         ; *    documentation and/or other materials provided wit
+                       h the distribution.
+   21 00000000         ; *
+   22 00000000         ; *    Neither the name of Texas Instruments Incorporate
+                       d nor the names of
+   23 00000000         ; *    its contributors may be used to endorse or promot
+                       e products derived
+   24 00000000         ; *    from this software without specific prior written
+                        permission.
+   25 00000000         ; *
+   26 00000000         ; *  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS 
+                       AND CONTRIBUTORS
+   27 00000000         ; *  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCL
+                       UDING, BUT NOT
+   28 00000000         ; *  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILI
+                       TY AND FITNESS FOR
+   29 00000000         ; *  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SH
+                       ALL THE COPYRIGHT
+   30 00000000         ; *  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, IND
+                       IRECT, INCIDENTAL,
+   31 00000000         ; *  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLU
+                       DING, BUT NOT
+   32 00000000         ; *  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERV
+                       ICES; LOSS OF USE,
+   33 00000000         ; *  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+                        CAUSED AND ON ANY
+   34 00000000         ; *  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LI
+                       ABILITY, OR TORT
+   35 00000000         ; *  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY 
+                       WAY OUT OF THE USE
+
+
+
+ARM Macro Assembler    Page 2 
+
+
+   36 00000000         ; *  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILIT
+                       Y OF SUCH DAMAGE.
+   37 00000000         ; *
+   38 00000000         ; ******************************************************
+                       ************************/
+   39 00000000         ;// <<< Use Configuration Wizard in Context Menu >>>
+   40 00000000         ;*/
+   41 00000000         
+   42 00000000         
+   43 00000000         ; <h> Stack Configuration
+   44 00000000         ;   <o> Stack Size (in Bytes) <0x0-0xFFFFFFFF:8>
+   45 00000000         ; </h>
+   46 00000000 00000200 
+                       Stack_Size
+                               EQU              0x00000200
+   47 00000000         
+   48 00000000                 AREA             STACK, NOINIT, READWRITE, ALIGN
+=3
+   49 00000000         Stack_Mem
+                               SPACE            Stack_Size
+   50 00000200         __initial_sp
+   51 00000200         
+   52 00000200         
+   53 00000200         ; <h> Heap Configuration
+   54 00000200         ;   <o>  Heap Size (in Bytes) <0x0-0xFFFFFFFF:8>
+   55 00000200         ; </h>
+   56 00000200 00000000 
+                       Heap_Size
+                               EQU              0x00000000
+   57 00000200         
+   58 00000200                 AREA             HEAP, NOINIT, READWRITE, ALIGN=
+3
+   59 00000000         __heap_base
+   60 00000000         Heap_Mem
+                               SPACE            Heap_Size
+   61 00000000         __heap_limit
+   62 00000000         
+   63 00000000         
+   64 00000000                 PRESERVE8
+   65 00000000                 THUMB
+   66 00000000         ;// <<< end of configuration section >>>
+   67 00000000         
+   68 00000000         ; Vector Table Mapped to Address 0 at Reset
+   69 00000000         
+   70 00000000                 AREA             RESET, DATA, READONLY
+   71 00000000                 EXPORT           __Vectors
+   72 00000000                 EXPORT           __Vectors_End
+   73 00000000                 EXPORT           __Vectors_Size
+   74 00000000         
+   75 00000000 00000000 
+                       __Vectors
+                               DCD              __initial_sp ;  0 Top of Stack
+   76 00000004 00000000        DCD              ResetISR    ;  1 Reset Handler
+   77 00000008 00000000        DCD              NmiSR       ;  2 NMI Handler
+   78 0000000C 00000000        DCD              FaultISR    ;  3 Hard Fault Han
+                                                            dler
+   79 00000010 00000000        DCD              MPUFaultIntHandler ;  4 The MPU
+                                                             fault handler
+   80 00000014 00000000        DCD              BusFaultIntHandler ;  5 The bus
+
+
+
+ARM Macro Assembler    Page 3 
+
+
+                                                             fault handler
+   81 00000018 00000000        DCD              UsageFaultIntHandler ;  6 The u
+                                                            sage fault handler
+   82 0000001C 00000000        DCD              0           ;  7 Reserved
+   83 00000020 00000000        DCD              0           ;  8 Reserved
+   84 00000024 00000000        DCD              0           ;  9 Reserved
+   85 00000028 00000000        DCD              0           ; 10 Reserved
+   86 0000002C 00000000        DCD              SVCallIntHandler 
+                                                            ; 11 SVCall Handler
+                                                            
+   87 00000030 00000000        DCD              DebugMonIntHandler ; 12 Debug m
+                                                            onitor handler
+   88 00000034 00000000        DCD              0           ; 13 Reserved
+   89 00000038 00000000        DCD              PendSVIntHandler 
+                                                            ; 14 PendSV Handler
+                                                            
+   90 0000003C 00000000        DCD              SysTickIntHandler ; 15 SysTick 
+                                                            Handler
+   91 00000040         
+   92 00000040         ; External Interrupts
+   93 00000040 00000000        DCD              GPIOIntHandler ; 16 AON edge de
+                                                            tect
+   94 00000044 00000000        DCD              I2CIntHandler ; 17 I2C
+   95 00000048 00000000        DCD              RFCCPE1IntHandler ; 18 RF Core 
+                                                            Command & Packet En
+                                                            gine 1
+   96 0000004C 00000000        DCD              IntDefaultHandler ; 19 Reserved
+                                                            
+   97 00000050 00000000        DCD              AONRTCIntHandler ; 20 AON RTC
+   98 00000054 00000000        DCD              UART0IntHandler ; 21 UART0 Rx a
+                                                            nd Tx
+   99 00000058 00000000        DCD              IntDefaultHandler ; 22 AUX soft
+                                                            ware event 0
+  100 0000005C 00000000        DCD              SSI0IntHandler 
+                                                            ; 23 SSI0 Rx and Tx
+                                                            
+  101 00000060 00000000        DCD              SSI1IntHandler 
+                                                            ; 24 SSI1 Rx and Tx
+                                                            
+  102 00000064 00000000        DCD              RFCCPE0IntHandler ; 25 RF Core 
+                                                            Command & Packet En
+                                                            gine 0
+  103 00000068 00000000        DCD              RFCHardwareIntHandler ; 26 RF C
+                                                            ore Hardware
+  104 0000006C 00000000        DCD              RFCCmdAckIntHandler ; 27 RF Cor
+                                                            e Command Acknowled
+                                                            ge
+  105 00000070 00000000        DCD              I2SIntHandler ; 28 I2S
+  106 00000074 00000000        DCD              IntDefaultHandler ; 29 AUX soft
+                                                            ware event 1
+  107 00000078 00000000        DCD              WatchdogIntHandler 
+                                                            ; 30 Watchdog timer
+                                                            
+  108 0000007C 00000000        DCD              Timer0AIntHandler ; 31 Timer 0 
+                                                            subtimer A
+  109 00000080 00000000        DCD              Timer0BIntHandler ; 32 Timer 0 
+                                                            subtimer B
+  110 00000084 00000000        DCD              Timer1AIntHandler ; 33 Timer 1 
+                                                            subtimer A
+
+
+
+ARM Macro Assembler    Page 4 
+
+
+  111 00000088 00000000        DCD              Timer1BIntHandler ; 34 Timer 1 
+                                                            subtimer B
+  112 0000008C 00000000        DCD              Timer2AIntHandler ; 35 Timer 2 
+                                                            subtimer A
+  113 00000090 00000000        DCD              Timer2BIntHandler ; 36 Timer 2 
+                                                            subtimer B
+  114 00000094 00000000        DCD              Timer3AIntHandler ; 37 Timer 3 
+                                                            subtimer A
+  115 00000098 00000000        DCD              Timer3BIntHandler ; 38 Timer 3 
+                                                            subtimer B
+  116 0000009C 00000000        DCD              CryptoIntHandler ; 39 Crypto Co
+                                                            re Result available
+                                                            
+  117 000000A0 00000000        DCD              uDMAIntHandler 
+                                                            ; 40 uDMA Software
+  118 000000A4 00000000        DCD              uDMAErrIntHandler 
+                                                            ; 41 uDMA Error
+  119 000000A8 00000000        DCD              FlashIntHandler ; 42 Flash cont
+                                                            roller
+  120 000000AC 00000000        DCD              SWEvent0IntHandler ; 43 Softwar
+                                                            e Event 0
+  121 000000B0 00000000        DCD              AUXCombEventIntHandler ; 44 AUX
+                                                             combined event
+  122 000000B4 00000000        DCD              AONProgIntHandler ; 45 AON prog
+                                                            rammable 0
+  123 000000B8 00000000        DCD              DynProgIntHandler ; 46 Dynamic 
+                                                            Programmable interr
+                                                            upt
+  124 000000BC         ;    source (Default: PRCM)
+  125 000000BC 00000000        DCD              AUXCompAIntHandler ; 47 AUX Com
+                                                            parator A
+  126 000000C0 00000000        DCD              AUXADCIntHandler ; 48 AUX ADC n
+                                                            ew sample or ADC DM
+                                                            A
+  127 000000C4         ;    done, ADC underflow, ADC overflow
+  128 000000C4 00000000        DCD              TRNGIntHandler ; 49 TRNG event
+  129 000000C8         __Vectors_End
+  130 000000C8         
+  131 000000C8 000000C8 
+                       __Vectors_Size
+                               EQU              __Vectors_End - __Vectors
+  132 000000C8         
+  133 000000C8                 AREA             |.text|, CODE, READONLY
+  134 00000000         
+  135 00000000         
+  136 00000000         ; Reset Handler
+  137 00000000         
+  138 00000000         ResetISR
+                               PROC
+  139 00000000                 EXPORT           ResetISR                  [WEAK
+]
+  140 00000000                 IMPORT           NOROM_SetupTrimDevice
+  141 00000000                 IMPORT           __main
+  142 00000000         ; Final trim of device (setup.c in CC26xxWare)
+  143 00000000 480A            LDR              R0, =NOROM_SetupTrimDevice
+  144 00000002 4780            BLX              R0
+  145 00000004         ; Jump to initialization routine
+  146 00000004 480A            LDR              R0, =__main
+  147 00000006 4700            BX               R0
+
+
+
+ARM Macro Assembler    Page 5 
+
+
+  148 00000008         ; If we ever return, signal error
+  149 00000008 480A            LDR              R0, =FaultISR
+  150 0000000A 4700            BX               R0
+  151 0000000C                 ENDP
+  152 0000000C         
+  153 0000000C         
+  154 0000000C         ; Dummy Exception Handlers (infinite loops which can be 
+                       modified)
+  155 0000000C         
+  156 0000000C         NmiSR   PROC
+  157 0000000C                 EXPORT           NmiSR                     [WEAK
+]
+  158 0000000C E7FE            B                .
+  159 0000000E                 ENDP
+  160 0000000E         FaultISR
+                               PROC
+  161 0000000E                 EXPORT           FaultISR                  [WEAK
+]
+  162 0000000E E7FE            B                .
+  163 00000010                 ENDP
+  165 00000010         MPUFaultIntHandler
+                               PROC
+  166 00000010                 EXPORT           MPUFaultIntHandler        [WEAK
+]
+  167 00000010 E7FE            B                .
+  168 00000012                 ENDP
+  170 00000012         BusFaultIntHandler
+                               PROC
+  171 00000012                 EXPORT           BusFaultIntHandler        [WEAK
+]
+  172 00000012 E7FE            B                .
+  173 00000014                 ENDP
+  175 00000014         UsageFaultIntHandler
+                               PROC
+  176 00000014                 EXPORT           UsageFaultIntHandler      [WEAK
+]
+  177 00000014 E7FE            B                .
+  178 00000016                 ENDP
+  180 00000016         SVCallIntHandler
+                               PROC
+  181 00000016                 EXPORT           SVCallIntHandler          [WEAK
+]
+  182 00000016 E7FE            B                .
+  183 00000018                 ENDP
+  185 00000018         DebugMonIntHandler
+                               PROC
+  186 00000018                 EXPORT           DebugMonIntHandler        [WEAK
+]
+  187 00000018 E7FE            B                .
+  188 0000001A                 ENDP
+  190 0000001A         PendSVIntHandler
+                               PROC
+  191 0000001A                 EXPORT           PendSVIntHandler          [WEAK
+]
+  192 0000001A E7FE            B                .
+  193 0000001C                 ENDP
+  195 0000001C         SysTickIntHandler
+                               PROC
+  196 0000001C                 EXPORT           SysTickIntHandler         [WEAK
+
+
+
+ARM Macro Assembler    Page 6 
+
+
+]
+  197 0000001C E7FE            B                .
+  198 0000001E                 ENDP
+  199 0000001E         
+  201 0000001E         IntDefaultHandler
+                               PROC
+  202 0000001E                 EXPORT           GPIOIntHandler            [WEAK
+]
+  203 0000001E                 EXPORT           I2CIntHandler             [WEAK
+]
+  204 0000001E                 EXPORT           RFCCPE1IntHandler         [WEAK
+]
+  205 0000001E                 EXPORT           AONRTCIntHandler          [WEAK
+]
+  206 0000001E                 EXPORT           UART0IntHandler           [WEAK
+]
+  207 0000001E                 EXPORT           SSI0IntHandler            [WEAK
+]
+  208 0000001E                 EXPORT           SSI1IntHandler            [WEAK
+]
+  209 0000001E                 EXPORT           RFCCPE0IntHandler         [WEAK
+]
+  210 0000001E                 EXPORT           RFCHardwareIntHandler     [WEAK
+]
+  211 0000001E                 EXPORT           RFCCmdAckIntHandler       [WEAK
+]
+  212 0000001E                 EXPORT           I2SIntHandler             [WEAK
+]
+  213 0000001E                 EXPORT           WatchdogIntHandler        [WEAK
+]
+  214 0000001E                 EXPORT           Timer0AIntHandler         [WEAK
+]
+  215 0000001E                 EXPORT           Timer0BIntHandler         [WEAK
+]
+  216 0000001E                 EXPORT           Timer1AIntHandler         [WEAK
+]
+  217 0000001E                 EXPORT           Timer1BIntHandler         [WEAK
+]
+  218 0000001E                 EXPORT           Timer2AIntHandler         [WEAK
+]
+  219 0000001E                 EXPORT           Timer2BIntHandler         [WEAK
+]
+  220 0000001E                 EXPORT           Timer3AIntHandler         [WEAK
+]
+  221 0000001E                 EXPORT           Timer3BIntHandler         [WEAK
+]
+  222 0000001E                 EXPORT           CryptoIntHandler          [WEAK
+]
+  223 0000001E                 EXPORT           uDMAIntHandler            [WEAK
+]
+  224 0000001E                 EXPORT           uDMAErrIntHandler         [WEAK
+]
+  225 0000001E                 EXPORT           FlashIntHandler           [WEAK
+]
+  226 0000001E                 EXPORT           SWEvent0IntHandler        [WEAK
+]
+  227 0000001E                 EXPORT           AUXCombEventIntHandler    [WEAK
+]
+  228 0000001E                 EXPORT           AONProgIntHandler         [WEAK
+
+
+
+ARM Macro Assembler    Page 7 
+
+
+]
+  229 0000001E                 EXPORT           DynProgIntHandler         [WEAK
+]
+  230 0000001E                 EXPORT           AUXCompAIntHandler        [WEAK
+]
+  231 0000001E                 EXPORT           AUXADCIntHandler          [WEAK
+]
+  232 0000001E                 EXPORT           TRNGIntHandler            [WEAK
+]
+  233 0000001E         GPIOIntHandler
+  234 0000001E         I2CIntHandler
+  235 0000001E         RFCCPE1IntHandler
+  236 0000001E         AONRTCIntHandler
+  237 0000001E         UART0IntHandler
+  238 0000001E         SSI0IntHandler
+  239 0000001E         SSI1IntHandler
+  240 0000001E         RFCCPE0IntHandler
+  241 0000001E         RFCHardwareIntHandler
+  242 0000001E         RFCCmdAckIntHandler
+  243 0000001E         I2SIntHandler
+  244 0000001E         WatchdogIntHandler
+  245 0000001E         Timer0AIntHandler
+  246 0000001E         Timer0BIntHandler
+  247 0000001E         Timer1AIntHandler
+  248 0000001E         Timer1BIntHandler
+  249 0000001E         Timer2AIntHandler
+  250 0000001E         Timer2BIntHandler
+  251 0000001E         Timer3AIntHandler
+  252 0000001E         Timer3BIntHandler
+  253 0000001E         CryptoIntHandler
+  254 0000001E         uDMAIntHandler
+  255 0000001E         uDMAErrIntHandler
+  256 0000001E         FlashIntHandler
+  257 0000001E         SWEvent0IntHandler
+  258 0000001E         AUXCombEventIntHandler
+  259 0000001E         AONProgIntHandler
+  260 0000001E         DynProgIntHandler
+  261 0000001E         AUXCompAIntHandler
+  262 0000001E         AUXADCIntHandler
+  263 0000001E         TRNGIntHandler
+  264 0000001E E7FE            B                .
+  265 00000020                 ENDP
+  266 00000020         
+  267 00000020         
+  268 00000020                 ALIGN
+  269 00000020         
+  270 00000020         
+  271 00000020         ; User Initial Stack & Heap
+  272 00000020         
+  273 00000020                 IF               :DEF:__MICROLIB
+  280 00000020         
+  281 00000020                 IMPORT           __use_two_region_memory
+  282 00000020                 EXPORT           __user_initial_stackheap
+  283 00000020         __user_initial_stackheap
+  284 00000020         
+  285 00000020 4805            LDR              R0, =  Heap_Mem
+  286 00000022 4906            LDR              R1, =(Stack_Mem + Stack_Size)
+  287 00000024 4A04            LDR              R2, = (Heap_Mem +  Heap_Size)
+  288 00000026 4B06            LDR              R3, = Stack_Mem
+
+
+
+ARM Macro Assembler    Page 8 
+
+
+  289 00000028 4770            BX               LR
+  290 0000002A         
+  291 0000002A 00 00           ALIGN
+  292 0000002C         
+  293 0000002C                 ENDIF
+  294 0000002C         
+  295 0000002C         
+  296 0000002C                 END
+              00000000 
+              00000000 
+              00000000 
+              00000000 
+              00000200 
+              00000000 
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M3 --apcs=interw
+ork --depend=.\objects\startup_keil_1.d -o.\objects\startup_keil_1.o -IC:\Users
+\Hotriver\Desktop\新建文件夹\PortingContest\PortingContest\PortingContest_LAUNC
+HXL-CC2640R2_forlock\LiteOS_Kernel-master\projects\LAUNCHXL-CC2640R2-KEIL\RTE -
+I"D:\Program Files (x86)\Keil\MDK\PACK\ARM\CMSIS\4.5.0\Device\ARM\ARMCM3\Includ
+e" -I"D:\Program Files (x86)\Keil\MDK\ARM\CMSIS\Include" --predefine="__UVISION
+_VERSION SETA 517" --predefine="ARMCM3 SETA 1" --list=.\listings\startup_keil.l
+st ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\startup_files\startup_k
+eil.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+STACK 00000000
+
+Symbol: STACK
+   Definitions
+      At line 48 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\s
+tartup_files\startup_keil.s
+   Uses
+      None
+Comment: STACK unused
+Stack_Mem 00000000
+
+Symbol: Stack_Mem
+   Definitions
+      At line 49 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\s
+tartup_files\startup_keil.s
+   Uses
+      At line 286 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+      At line 288 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+
+__initial_sp 00000200
+
+Symbol: __initial_sp
+   Definitions
+      At line 50 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\s
+tartup_files\startup_keil.s
+   Uses
+      At line 75 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\s
+tartup_files\startup_keil.s
+Comment: __initial_sp used once
+3 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+HEAP 00000000
+
+Symbol: HEAP
+   Definitions
+      At line 58 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\s
+tartup_files\startup_keil.s
+   Uses
+      None
+Comment: HEAP unused
+Heap_Mem 00000000
+
+Symbol: Heap_Mem
+   Definitions
+      At line 60 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\s
+tartup_files\startup_keil.s
+   Uses
+      At line 285 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+      At line 287 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+
+__heap_base 00000000
+
+Symbol: __heap_base
+   Definitions
+      At line 59 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\s
+tartup_files\startup_keil.s
+   Uses
+      None
+Comment: __heap_base unused
+__heap_limit 00000000
+
+Symbol: __heap_limit
+   Definitions
+      At line 61 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\s
+tartup_files\startup_keil.s
+   Uses
+      None
+Comment: __heap_limit unused
+4 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+RESET 00000000
+
+Symbol: RESET
+   Definitions
+      At line 70 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\s
+tartup_files\startup_keil.s
+   Uses
+      None
+Comment: RESET unused
+__Vectors 00000000
+
+Symbol: __Vectors
+   Definitions
+      At line 75 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\s
+tartup_files\startup_keil.s
+   Uses
+      At line 71 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\s
+tartup_files\startup_keil.s
+      At line 131 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+
+__Vectors_End 000000C8
+
+Symbol: __Vectors_End
+   Definitions
+      At line 129 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+   Uses
+      At line 72 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\s
+tartup_files\startup_keil.s
+      At line 131 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+
+3 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+.text 00000000
+
+Symbol: .text
+   Definitions
+      At line 133 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+   Uses
+      None
+Comment: .text unused
+AONProgIntHandler 0000001E
+
+Symbol: AONProgIntHandler
+   Definitions
+      At line 259 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+   Uses
+      At line 122 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+      At line 228 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+
+AONRTCIntHandler 0000001E
+
+Symbol: AONRTCIntHandler
+   Definitions
+      At line 236 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+   Uses
+      At line 97 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\s
+tartup_files\startup_keil.s
+      At line 205 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+
+AUXADCIntHandler 0000001E
+
+Symbol: AUXADCIntHandler
+   Definitions
+      At line 262 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+   Uses
+      At line 126 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+      At line 231 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+
+AUXCombEventIntHandler 0000001E
+
+Symbol: AUXCombEventIntHandler
+   Definitions
+      At line 258 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+   Uses
+      At line 121 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+      At line 227 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+
+AUXCompAIntHandler 0000001E
+
+
+
+
+ARM Macro Assembler    Page 2 Alphabetic symbol ordering
+Relocatable symbols
+
+Symbol: AUXCompAIntHandler
+   Definitions
+      At line 261 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+   Uses
+      At line 125 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+      At line 230 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+
+BusFaultIntHandler 00000012
+
+Symbol: BusFaultIntHandler
+   Definitions
+      At line 170 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+   Uses
+      At line 80 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\s
+tartup_files\startup_keil.s
+      At line 171 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+
+CryptoIntHandler 0000001E
+
+Symbol: CryptoIntHandler
+   Definitions
+      At line 253 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+   Uses
+      At line 116 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+      At line 222 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+
+DebugMonIntHandler 00000018
+
+Symbol: DebugMonIntHandler
+   Definitions
+      At line 185 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+   Uses
+      At line 87 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\s
+tartup_files\startup_keil.s
+      At line 186 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+
+DynProgIntHandler 0000001E
+
+Symbol: DynProgIntHandler
+   Definitions
+      At line 260 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+   Uses
+      At line 123 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+      At line 229 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+
+FaultISR 0000000E
+
+
+
+ARM Macro Assembler    Page 3 Alphabetic symbol ordering
+Relocatable symbols
+
+
+Symbol: FaultISR
+   Definitions
+      At line 160 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+   Uses
+      At line 78 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\s
+tartup_files\startup_keil.s
+      At line 149 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+      At line 161 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+
+FlashIntHandler 0000001E
+
+Symbol: FlashIntHandler
+   Definitions
+      At line 256 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+   Uses
+      At line 119 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+      At line 225 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+
+GPIOIntHandler 0000001E
+
+Symbol: GPIOIntHandler
+   Definitions
+      At line 233 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+   Uses
+      At line 93 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\s
+tartup_files\startup_keil.s
+      At line 202 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+
+I2CIntHandler 0000001E
+
+Symbol: I2CIntHandler
+   Definitions
+      At line 234 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+   Uses
+      At line 94 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\s
+tartup_files\startup_keil.s
+      At line 203 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+
+I2SIntHandler 0000001E
+
+Symbol: I2SIntHandler
+   Definitions
+      At line 243 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+   Uses
+      At line 105 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+      At line 212 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+
+
+
+ARM Macro Assembler    Page 4 Alphabetic symbol ordering
+Relocatable symbols
+
+startup_files\startup_keil.s
+
+IntDefaultHandler 0000001E
+
+Symbol: IntDefaultHandler
+   Definitions
+      At line 201 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+   Uses
+      At line 96 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\s
+tartup_files\startup_keil.s
+      At line 99 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\s
+tartup_files\startup_keil.s
+      At line 106 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+
+MPUFaultIntHandler 00000010
+
+Symbol: MPUFaultIntHandler
+   Definitions
+      At line 165 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+   Uses
+      At line 79 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\s
+tartup_files\startup_keil.s
+      At line 166 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+
+NmiSR 0000000C
+
+Symbol: NmiSR
+   Definitions
+      At line 156 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+   Uses
+      At line 77 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\s
+tartup_files\startup_keil.s
+      At line 157 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+
+PendSVIntHandler 0000001A
+
+Symbol: PendSVIntHandler
+   Definitions
+      At line 190 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+   Uses
+      At line 89 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\s
+tartup_files\startup_keil.s
+      At line 191 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+
+RFCCPE0IntHandler 0000001E
+
+Symbol: RFCCPE0IntHandler
+   Definitions
+      At line 240 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+   Uses
+
+
+
+ARM Macro Assembler    Page 5 Alphabetic symbol ordering
+Relocatable symbols
+
+      At line 102 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+      At line 209 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+
+RFCCPE1IntHandler 0000001E
+
+Symbol: RFCCPE1IntHandler
+   Definitions
+      At line 235 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+   Uses
+      At line 95 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\s
+tartup_files\startup_keil.s
+      At line 204 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+
+RFCCmdAckIntHandler 0000001E
+
+Symbol: RFCCmdAckIntHandler
+   Definitions
+      At line 242 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+   Uses
+      At line 104 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+      At line 211 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+
+RFCHardwareIntHandler 0000001E
+
+Symbol: RFCHardwareIntHandler
+   Definitions
+      At line 241 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+   Uses
+      At line 103 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+      At line 210 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+
+ResetISR 00000000
+
+Symbol: ResetISR
+   Definitions
+      At line 138 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+   Uses
+      At line 76 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\s
+tartup_files\startup_keil.s
+      At line 139 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+
+SSI0IntHandler 0000001E
+
+Symbol: SSI0IntHandler
+   Definitions
+      At line 238 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+
+
+
+ARM Macro Assembler    Page 6 Alphabetic symbol ordering
+Relocatable symbols
+
+   Uses
+      At line 100 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+      At line 207 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+
+SSI1IntHandler 0000001E
+
+Symbol: SSI1IntHandler
+   Definitions
+      At line 239 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+   Uses
+      At line 101 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+      At line 208 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+
+SVCallIntHandler 00000016
+
+Symbol: SVCallIntHandler
+   Definitions
+      At line 180 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+   Uses
+      At line 86 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\s
+tartup_files\startup_keil.s
+      At line 181 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+
+SWEvent0IntHandler 0000001E
+
+Symbol: SWEvent0IntHandler
+   Definitions
+      At line 257 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+   Uses
+      At line 120 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+      At line 226 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+
+SysTickIntHandler 0000001C
+
+Symbol: SysTickIntHandler
+   Definitions
+      At line 195 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+   Uses
+      At line 90 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\s
+tartup_files\startup_keil.s
+      At line 196 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+
+TRNGIntHandler 0000001E
+
+Symbol: TRNGIntHandler
+   Definitions
+      At line 263 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+
+
+
+ARM Macro Assembler    Page 7 Alphabetic symbol ordering
+Relocatable symbols
+
+startup_files\startup_keil.s
+   Uses
+      At line 128 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+      At line 232 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+
+Timer0AIntHandler 0000001E
+
+Symbol: Timer0AIntHandler
+   Definitions
+      At line 245 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+   Uses
+      At line 108 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+      At line 214 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+
+Timer0BIntHandler 0000001E
+
+Symbol: Timer0BIntHandler
+   Definitions
+      At line 246 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+   Uses
+      At line 109 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+      At line 215 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+
+Timer1AIntHandler 0000001E
+
+Symbol: Timer1AIntHandler
+   Definitions
+      At line 247 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+   Uses
+      At line 110 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+      At line 216 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+
+Timer1BIntHandler 0000001E
+
+Symbol: Timer1BIntHandler
+   Definitions
+      At line 248 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+   Uses
+      At line 111 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+      At line 217 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+
+Timer2AIntHandler 0000001E
+
+Symbol: Timer2AIntHandler
+   Definitions
+
+
+
+ARM Macro Assembler    Page 8 Alphabetic symbol ordering
+Relocatable symbols
+
+      At line 249 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+   Uses
+      At line 112 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+      At line 218 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+
+Timer2BIntHandler 0000001E
+
+Symbol: Timer2BIntHandler
+   Definitions
+      At line 250 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+   Uses
+      At line 113 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+      At line 219 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+
+Timer3AIntHandler 0000001E
+
+Symbol: Timer3AIntHandler
+   Definitions
+      At line 251 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+   Uses
+      At line 114 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+      At line 220 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+
+Timer3BIntHandler 0000001E
+
+Symbol: Timer3BIntHandler
+   Definitions
+      At line 252 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+   Uses
+      At line 115 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+      At line 221 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+
+UART0IntHandler 0000001E
+
+Symbol: UART0IntHandler
+   Definitions
+      At line 237 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+   Uses
+      At line 98 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\s
+tartup_files\startup_keil.s
+      At line 206 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+
+UsageFaultIntHandler 00000014
+
+Symbol: UsageFaultIntHandler
+
+
+
+ARM Macro Assembler    Page 9 Alphabetic symbol ordering
+Relocatable symbols
+
+   Definitions
+      At line 175 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+   Uses
+      At line 81 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\s
+tartup_files\startup_keil.s
+      At line 176 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+
+WatchdogIntHandler 0000001E
+
+Symbol: WatchdogIntHandler
+   Definitions
+      At line 244 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+   Uses
+      At line 107 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+      At line 213 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+
+__user_initial_stackheap 00000020
+
+Symbol: __user_initial_stackheap
+   Definitions
+      At line 283 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+   Uses
+      At line 282 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+Comment: __user_initial_stackheap used once
+uDMAErrIntHandler 0000001E
+
+Symbol: uDMAErrIntHandler
+   Definitions
+      At line 255 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+   Uses
+      At line 118 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+      At line 224 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+
+uDMAIntHandler 0000001E
+
+Symbol: uDMAIntHandler
+   Definitions
+      At line 254 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+   Uses
+      At line 117 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+      At line 223 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+
+44 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Absolute symbols
+
+Heap_Size 00000000
+
+Symbol: Heap_Size
+   Definitions
+      At line 56 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\s
+tartup_files\startup_keil.s
+   Uses
+      At line 60 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\s
+tartup_files\startup_keil.s
+      At line 287 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+
+Stack_Size 00000200
+
+Symbol: Stack_Size
+   Definitions
+      At line 46 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\s
+tartup_files\startup_keil.s
+   Uses
+      At line 49 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\s
+tartup_files\startup_keil.s
+      At line 286 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+
+__Vectors_Size 000000C8
+
+Symbol: __Vectors_Size
+   Definitions
+      At line 131 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+   Uses
+      At line 73 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\s
+tartup_files\startup_keil.s
+Comment: __Vectors_Size used once
+3 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+External symbols
+
+NOROM_SetupTrimDevice 00000000
+
+Symbol: NOROM_SetupTrimDevice
+   Definitions
+      At line 140 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+   Uses
+      At line 143 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+Comment: NOROM_SetupTrimDevice used once
+__main 00000000
+
+Symbol: __main
+   Definitions
+      At line 141 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+   Uses
+      At line 146 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+Comment: __main used once
+__use_two_region_memory 00000000
+
+Symbol: __use_two_region_memory
+   Definitions
+      At line 281 in file ..\..\platform\LAUNCHXL-CC2640R2\ti\devices\cc26x0r2\
+startup_files\startup_keil.s
+   Uses
+      None
+Comment: __use_two_region_memory unused
+3 symbols
+396 symbols in table

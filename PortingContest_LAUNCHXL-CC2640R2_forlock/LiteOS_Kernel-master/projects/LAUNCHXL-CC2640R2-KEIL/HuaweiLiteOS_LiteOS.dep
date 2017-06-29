@@ -1,0 +1,732 @@
+Dependencies for Project 'HuaweiLiteOS', Target 'LiteOS': (DO NOT MODIFY !)
+F (..\..\kernel\base\core\los_priqueue.c)(0x58DE76A0)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\..\example\include -I..\..\kernel\include -I..\..\kernel\base\include -I..\..\kernel\link\keil -I..\..\kernel\cmsis -I..\..\kernel\config -I..\..\kernel\cpu\arm\cortex-m3 -I..\..\platform\LAUNCHXL-CC2640R2 -I..\..\platform\LAUNCHXL-CC2640R2\library\inc-I C:\Users\Hotriver\Desktop\新建文件夹\PortingContest\PortingContest\PortingContest_LAUNCHXL-CC2640R2_forlock\LiteOS_Kernel-master\projects\LAUNCHXL-CC2640R2-KEIL\RTE-I "D:\Program Files (x86)\Keil\MDK\PACK\TexasInstruments\CC13xxCC26xx\0.0.2\Device\Include"-I "D:\Program Files (x86)\Keil\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="517" -DRAM_SIZE_LEVEL_1 -DLAUNCHXL_CC2640R2-o .\los_priqueue.o --omf_browse .\los_priqueue.crf --depend .\los_priqueue.d)
+I (..\..\kernel\base\core\los_priqueue.inc)(0x58DE76A0)
+I (..\..\kernel\base\include\los_priqueue.ph)(0x58DE76A0)
+I (..\..\kernel\include\los_priqueue.h)(0x58DE76A0)
+I (..\..\kernel\include\los_list.h)(0x58DE76A0)
+I (..\..\kernel\include\los_base.h)(0x58DE76A0)
+I (..\..\kernel\link\keil\los_builddef.h)(0x58DE76A0)
+I (..\..\kernel\include\los_typedef.h)(0x5949296F)
+I (..\..\kernel\config\los_config.h)(0x591472E5)
+I (..\..\kernel\include\los_printf.h)(0x58DE76A0)
+I (D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\include\stdio.h)(0x55DB2B76)
+I (..\..\kernel\include\los_errno.h)(0x58DE76A0)
+I (..\..\kernel\base\include\los_base.ph)(0x58DE76A0)
+I (..\..\kernel\base\include\los_task.ph)(0x58DE76A0)
+I (..\..\kernel\include\los_task.h)(0x58DE76A0)
+I (..\..\kernel\include\los_sys.h)(0x58DE76A0)
+I (..\..\kernel\cpu\arm\cortex-m3\los_hwi.h)(0x58DE76A0)
+I (..\..\kernel\include\los_tick.h)(0x58DE76A0)
+I (..\..\kernel\include\los_event.h)(0x58DE76A0)
+I (..\..\kernel\include\los_memory.h)(0x58DE76A0)
+F (..\..\kernel\base\core\los_swtmr.c)(0x58DE76A0)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\..\example\include -I..\..\kernel\include -I..\..\kernel\base\include -I..\..\kernel\link\keil -I..\..\kernel\cmsis -I..\..\kernel\config -I..\..\kernel\cpu\arm\cortex-m3 -I..\..\platform\LAUNCHXL-CC2640R2 -I..\..\platform\LAUNCHXL-CC2640R2\library\inc-I C:\Users\Hotriver\Desktop\新建文件夹\PortingContest\PortingContest\PortingContest_LAUNCHXL-CC2640R2_forlock\LiteOS_Kernel-master\projects\LAUNCHXL-CC2640R2-KEIL\RTE-I "D:\Program Files (x86)\Keil\MDK\PACK\TexasInstruments\CC13xxCC26xx\0.0.2\Device\Include"-I "D:\Program Files (x86)\Keil\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="517" -DRAM_SIZE_LEVEL_1 -DLAUNCHXL_CC2640R2-o .\los_swtmr.o --omf_browse .\los_swtmr.crf --depend .\los_swtmr.d)
+I (..\..\kernel\base\core\los_swtmr.inc)(0x58DE76A0)
+I (..\..\kernel\base\include\los_swtmr.ph)(0x58DE76A0)
+I (..\..\kernel\include\los_swtmr.h)(0x58DE76A0)
+I (..\..\kernel\include\los_base.h)(0x58DE76A0)
+I (..\..\kernel\link\keil\los_builddef.h)(0x58DE76A0)
+I (..\..\kernel\include\los_typedef.h)(0x5949296F)
+I (..\..\kernel\config\los_config.h)(0x591472E5)
+I (..\..\kernel\include\los_printf.h)(0x58DE76A0)
+I (D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\include\stdio.h)(0x55DB2B76)
+I (..\..\kernel\include\los_list.h)(0x58DE76A0)
+I (..\..\kernel\include\los_errno.h)(0x58DE76A0)
+I (..\..\kernel\include\los_task.h)(0x58DE76A0)
+I (..\..\kernel\include\los_sys.h)(0x58DE76A0)
+I (..\..\kernel\cpu\arm\cortex-m3\los_hwi.h)(0x58DE76A0)
+I (..\..\kernel\include\los_tick.h)(0x58DE76A0)
+I (..\..\kernel\include\los_event.h)(0x58DE76A0)
+I (..\..\kernel\base\include\los_base.ph)(0x58DE76A0)
+I (..\..\kernel\base\include\los_membox.ph)(0x58DE76A0)
+I (..\..\kernel\include\los_membox.h)(0x58DE76A0)
+I (..\..\kernel\base\include\los_memory.ph)(0x58DE76A0)
+I (..\..\kernel\include\los_memory.h)(0x58DE76A0)
+I (..\..\kernel\base\include\los_queue.ph)(0x58DE76A0)
+I (..\..\kernel\include\los_queue.h)(0x58DE76A0)
+I (..\..\kernel\base\include\los_task.ph)(0x58DE76A0)
+I (D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\include\string.h)(0x55DB2B78)
+F (..\..\kernel\base\core\los_sys.c)(0x58DE76A0)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\..\example\include -I..\..\kernel\include -I..\..\kernel\base\include -I..\..\kernel\link\keil -I..\..\kernel\cmsis -I..\..\kernel\config -I..\..\kernel\cpu\arm\cortex-m3 -I..\..\platform\LAUNCHXL-CC2640R2 -I..\..\platform\LAUNCHXL-CC2640R2\library\inc-I C:\Users\Hotriver\Desktop\新建文件夹\PortingContest\PortingContest\PortingContest_LAUNCHXL-CC2640R2_forlock\LiteOS_Kernel-master\projects\LAUNCHXL-CC2640R2-KEIL\RTE-I "D:\Program Files (x86)\Keil\MDK\PACK\TexasInstruments\CC13xxCC26xx\0.0.2\Device\Include"-I "D:\Program Files (x86)\Keil\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="517" -DRAM_SIZE_LEVEL_1 -DLAUNCHXL_CC2640R2-o .\los_sys.o --omf_browse .\los_sys.crf --depend .\los_sys.d)
+I (..\..\kernel\base\core\los_sys.inc)(0x58DE76A0)
+I (..\..\kernel\base\include\los_sys.ph)(0x58DE76A0)
+I (..\..\kernel\base\include\los_base.ph)(0x58DE76A0)
+I (..\..\kernel\include\los_base.h)(0x58DE76A0)
+I (..\..\kernel\link\keil\los_builddef.h)(0x58DE76A0)
+I (..\..\kernel\include\los_typedef.h)(0x5949296F)
+I (..\..\kernel\config\los_config.h)(0x591472E5)
+I (..\..\kernel\include\los_printf.h)(0x58DE76A0)
+I (D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\include\stdio.h)(0x55DB2B76)
+I (..\..\kernel\include\los_list.h)(0x58DE76A0)
+I (..\..\kernel\include\los_errno.h)(0x58DE76A0)
+I (..\..\kernel\include\los_sys.h)(0x58DE76A0)
+I (..\..\kernel\cpu\arm\cortex-m3\los_hwi.h)(0x58DE76A0)
+I (..\..\kernel\base\include\los_tick.ph)(0x58DE76A0)
+I (..\..\kernel\include\los_tick.h)(0x58DE76A0)
+F (..\..\kernel\base\core\los_task.c)(0x58DE76A0)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\..\example\include -I..\..\kernel\include -I..\..\kernel\base\include -I..\..\kernel\link\keil -I..\..\kernel\cmsis -I..\..\kernel\config -I..\..\kernel\cpu\arm\cortex-m3 -I..\..\platform\LAUNCHXL-CC2640R2 -I..\..\platform\LAUNCHXL-CC2640R2\library\inc-I C:\Users\Hotriver\Desktop\新建文件夹\PortingContest\PortingContest\PortingContest_LAUNCHXL-CC2640R2_forlock\LiteOS_Kernel-master\projects\LAUNCHXL-CC2640R2-KEIL\RTE-I "D:\Program Files (x86)\Keil\MDK\PACK\TexasInstruments\CC13xxCC26xx\0.0.2\Device\Include"-I "D:\Program Files (x86)\Keil\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="517" -DRAM_SIZE_LEVEL_1 -DLAUNCHXL_CC2640R2-o .\los_task.o --omf_browse .\los_task.crf --depend .\los_task.d)
+I (..\..\kernel\base\core\los_task.inc)(0x58DE76A0)
+I (..\..\kernel\base\include\los_task.ph)(0x58DE76A0)
+I (..\..\kernel\include\los_task.h)(0x58DE76A0)
+I (..\..\kernel\include\los_base.h)(0x58DE76A0)
+I (..\..\kernel\link\keil\los_builddef.h)(0x58DE76A0)
+I (..\..\kernel\include\los_typedef.h)(0x5949296F)
+I (..\..\kernel\config\los_config.h)(0x591472E5)
+I (..\..\kernel\include\los_printf.h)(0x58DE76A0)
+I (D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\include\stdio.h)(0x55DB2B76)
+I (..\..\kernel\include\los_list.h)(0x58DE76A0)
+I (..\..\kernel\include\los_errno.h)(0x58DE76A0)
+I (..\..\kernel\include\los_sys.h)(0x58DE76A0)
+I (..\..\kernel\cpu\arm\cortex-m3\los_hwi.h)(0x58DE76A0)
+I (..\..\kernel\include\los_tick.h)(0x58DE76A0)
+I (..\..\kernel\include\los_event.h)(0x58DE76A0)
+I (..\..\kernel\base\include\los_base.ph)(0x58DE76A0)
+I (..\..\kernel\base\include\los_memory.ph)(0x58DE76A0)
+I (..\..\kernel\include\los_memory.h)(0x58DE76A0)
+I (..\..\kernel\base\include\los_priqueue.ph)(0x58DE76A0)
+I (..\..\kernel\include\los_priqueue.h)(0x58DE76A0)
+I (..\..\kernel\base\include\los_sem.ph)(0x58DE76A0)
+I (..\..\kernel\include\los_sem.h)(0x58DE76A0)
+I (..\..\kernel\base\include\los_mux.ph)(0x58DE76A0)
+I (..\..\kernel\include\los_mux.h)(0x58DE76A0)
+I (..\..\kernel\cpu\arm\cortex-m3\los_hw.h)(0x58DE76A0)
+I (D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\include\string.h)(0x55DB2B78)
+F (..\..\kernel\base\core\los_tick.c)(0x58DE76A0)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\..\example\include -I..\..\kernel\include -I..\..\kernel\base\include -I..\..\kernel\link\keil -I..\..\kernel\cmsis -I..\..\kernel\config -I..\..\kernel\cpu\arm\cortex-m3 -I..\..\platform\LAUNCHXL-CC2640R2 -I..\..\platform\LAUNCHXL-CC2640R2\library\inc-I C:\Users\Hotriver\Desktop\新建文件夹\PortingContest\PortingContest\PortingContest_LAUNCHXL-CC2640R2_forlock\LiteOS_Kernel-master\projects\LAUNCHXL-CC2640R2-KEIL\RTE-I "D:\Program Files (x86)\Keil\MDK\PACK\TexasInstruments\CC13xxCC26xx\0.0.2\Device\Include"-I "D:\Program Files (x86)\Keil\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="517" -DRAM_SIZE_LEVEL_1 -DLAUNCHXL_CC2640R2-o .\los_tick.o --omf_browse .\los_tick.crf --depend .\los_tick.d)
+I (..\..\kernel\base\core\los_tick.inc)(0x58DE76A0)
+I (..\..\kernel\base\include\los_tick.ph)(0x58DE76A0)
+I (..\..\kernel\include\los_tick.h)(0x58DE76A0)
+I (..\..\kernel\include\los_errno.h)(0x58DE76A0)
+I (..\..\kernel\include\los_typedef.h)(0x5949296F)
+I (..\..\kernel\link\keil\los_builddef.h)(0x58DE76A0)
+I (..\..\kernel\base\include\los_base.ph)(0x58DE76A0)
+I (..\..\kernel\include\los_base.h)(0x58DE76A0)
+I (..\..\kernel\config\los_config.h)(0x591472E5)
+I (..\..\kernel\include\los_printf.h)(0x58DE76A0)
+I (D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\include\stdio.h)(0x55DB2B76)
+I (..\..\kernel\include\los_list.h)(0x58DE76A0)
+I (..\..\kernel\base\include\los_swtmr.ph)(0x58DE76A0)
+I (..\..\kernel\include\los_swtmr.h)(0x58DE76A0)
+I (..\..\kernel\include\los_task.h)(0x58DE76A0)
+I (..\..\kernel\include\los_sys.h)(0x58DE76A0)
+I (..\..\kernel\cpu\arm\cortex-m3\los_hwi.h)(0x58DE76A0)
+I (..\..\kernel\include\los_event.h)(0x58DE76A0)
+I (..\..\kernel\base\include\los_task.ph)(0x58DE76A0)
+I (..\..\kernel\base\include\los_timeslice.ph)(0x58DE76A0)
+F (..\..\kernel\base\core\los_timeslice.c)(0x58DE76A0)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\..\example\include -I..\..\kernel\include -I..\..\kernel\base\include -I..\..\kernel\link\keil -I..\..\kernel\cmsis -I..\..\kernel\config -I..\..\kernel\cpu\arm\cortex-m3 -I..\..\platform\LAUNCHXL-CC2640R2 -I..\..\platform\LAUNCHXL-CC2640R2\library\inc-I C:\Users\Hotriver\Desktop\新建文件夹\PortingContest\PortingContest\PortingContest_LAUNCHXL-CC2640R2_forlock\LiteOS_Kernel-master\projects\LAUNCHXL-CC2640R2-KEIL\RTE-I "D:\Program Files (x86)\Keil\MDK\PACK\TexasInstruments\CC13xxCC26xx\0.0.2\Device\Include"-I "D:\Program Files (x86)\Keil\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="517" -DRAM_SIZE_LEVEL_1 -DLAUNCHXL_CC2640R2-o .\los_timeslice.o --omf_browse .\los_timeslice.crf --depend .\los_timeslice.d)
+I (..\..\kernel\base\include\los_sys.ph)(0x58DE76A0)
+I (..\..\kernel\base\include\los_base.ph)(0x58DE76A0)
+I (..\..\kernel\include\los_base.h)(0x58DE76A0)
+I (..\..\kernel\link\keil\los_builddef.h)(0x58DE76A0)
+I (..\..\kernel\include\los_typedef.h)(0x5949296F)
+I (..\..\kernel\config\los_config.h)(0x591472E5)
+I (..\..\kernel\include\los_printf.h)(0x58DE76A0)
+I (D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\include\stdio.h)(0x55DB2B76)
+I (..\..\kernel\include\los_list.h)(0x58DE76A0)
+I (..\..\kernel\include\los_errno.h)(0x58DE76A0)
+I (..\..\kernel\include\los_sys.h)(0x58DE76A0)
+I (..\..\kernel\cpu\arm\cortex-m3\los_hwi.h)(0x58DE76A0)
+I (..\..\kernel\base\include\los_task.ph)(0x58DE76A0)
+I (..\..\kernel\include\los_task.h)(0x58DE76A0)
+I (..\..\kernel\include\los_tick.h)(0x58DE76A0)
+I (..\..\kernel\include\los_event.h)(0x58DE76A0)
+I (..\..\kernel\base\include\los_tick.ph)(0x58DE76A0)
+I (..\..\kernel\base\include\los_typedef.ph)(0x58DE76A0)
+F (..\..\kernel\base\ipc\los_event.c)(0x58DE76A0)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\..\example\include -I..\..\kernel\include -I..\..\kernel\base\include -I..\..\kernel\link\keil -I..\..\kernel\cmsis -I..\..\kernel\config -I..\..\kernel\cpu\arm\cortex-m3 -I..\..\platform\LAUNCHXL-CC2640R2 -I..\..\platform\LAUNCHXL-CC2640R2\library\inc-I C:\Users\Hotriver\Desktop\新建文件夹\PortingContest\PortingContest\PortingContest_LAUNCHXL-CC2640R2_forlock\LiteOS_Kernel-master\projects\LAUNCHXL-CC2640R2-KEIL\RTE-I "D:\Program Files (x86)\Keil\MDK\PACK\TexasInstruments\CC13xxCC26xx\0.0.2\Device\Include"-I "D:\Program Files (x86)\Keil\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="517" -DRAM_SIZE_LEVEL_1 -DLAUNCHXL_CC2640R2-o .\los_event.o --omf_browse .\los_event.crf --depend .\los_event.d)
+I (..\..\kernel\base\ipc\los_event.inc)(0x58DE76A0)
+I (..\..\kernel\base\include\los_event.ph)(0x58DE76A0)
+I (..\..\kernel\include\los_event.h)(0x58DE76A0)
+I (..\..\kernel\include\los_base.h)(0x58DE76A0)
+I (..\..\kernel\link\keil\los_builddef.h)(0x58DE76A0)
+I (..\..\kernel\include\los_typedef.h)(0x5949296F)
+I (..\..\kernel\config\los_config.h)(0x591472E5)
+I (..\..\kernel\include\los_printf.h)(0x58DE76A0)
+I (D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\include\stdio.h)(0x55DB2B76)
+I (..\..\kernel\include\los_list.h)(0x58DE76A0)
+I (..\..\kernel\include\los_errno.h)(0x58DE76A0)
+I (..\..\kernel\base\include\los_priqueue.ph)(0x58DE76A0)
+I (..\..\kernel\include\los_priqueue.h)(0x58DE76A0)
+I (..\..\kernel\base\include\los_task.ph)(0x58DE76A0)
+I (..\..\kernel\include\los_task.h)(0x58DE76A0)
+I (..\..\kernel\include\los_sys.h)(0x58DE76A0)
+I (..\..\kernel\cpu\arm\cortex-m3\los_hwi.h)(0x58DE76A0)
+I (..\..\kernel\include\los_tick.h)(0x58DE76A0)
+I (..\..\kernel\cpu\arm\cortex-m3\los_hw.h)(0x58DE76A0)
+F (..\..\kernel\base\ipc\los_mux.c)(0x58DE76A0)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\..\example\include -I..\..\kernel\include -I..\..\kernel\base\include -I..\..\kernel\link\keil -I..\..\kernel\cmsis -I..\..\kernel\config -I..\..\kernel\cpu\arm\cortex-m3 -I..\..\platform\LAUNCHXL-CC2640R2 -I..\..\platform\LAUNCHXL-CC2640R2\library\inc-I C:\Users\Hotriver\Desktop\新建文件夹\PortingContest\PortingContest\PortingContest_LAUNCHXL-CC2640R2_forlock\LiteOS_Kernel-master\projects\LAUNCHXL-CC2640R2-KEIL\RTE-I "D:\Program Files (x86)\Keil\MDK\PACK\TexasInstruments\CC13xxCC26xx\0.0.2\Device\Include"-I "D:\Program Files (x86)\Keil\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="517" -DRAM_SIZE_LEVEL_1 -DLAUNCHXL_CC2640R2-o .\los_mux.o --omf_browse .\los_mux.crf --depend .\los_mux.d)
+I (..\..\kernel\base\ipc\los_mux.inc)(0x58DE76A0)
+I (..\..\kernel\base\include\los_mux.ph)(0x58DE76A0)
+I (..\..\kernel\base\include\los_task.ph)(0x58DE76A0)
+I (..\..\kernel\include\los_task.h)(0x58DE76A0)
+I (..\..\kernel\include\los_base.h)(0x58DE76A0)
+I (..\..\kernel\link\keil\los_builddef.h)(0x58DE76A0)
+I (..\..\kernel\include\los_typedef.h)(0x5949296F)
+I (..\..\kernel\config\los_config.h)(0x591472E5)
+I (..\..\kernel\include\los_printf.h)(0x58DE76A0)
+I (D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\include\stdio.h)(0x55DB2B76)
+I (..\..\kernel\include\los_list.h)(0x58DE76A0)
+I (..\..\kernel\include\los_errno.h)(0x58DE76A0)
+I (..\..\kernel\include\los_sys.h)(0x58DE76A0)
+I (..\..\kernel\cpu\arm\cortex-m3\los_hwi.h)(0x58DE76A0)
+I (..\..\kernel\include\los_tick.h)(0x58DE76A0)
+I (..\..\kernel\include\los_event.h)(0x58DE76A0)
+I (..\..\kernel\include\los_mux.h)(0x58DE76A0)
+I (..\..\kernel\base\include\los_memory.ph)(0x58DE76A0)
+I (..\..\kernel\include\los_memory.h)(0x58DE76A0)
+I (..\..\kernel\base\include\los_priqueue.ph)(0x58DE76A0)
+I (..\..\kernel\include\los_priqueue.h)(0x58DE76A0)
+I (..\..\kernel\cpu\arm\cortex-m3\los_hw.h)(0x58DE76A0)
+F (..\..\kernel\base\ipc\los_queue.c)(0x58DE76A0)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\..\example\include -I..\..\kernel\include -I..\..\kernel\base\include -I..\..\kernel\link\keil -I..\..\kernel\cmsis -I..\..\kernel\config -I..\..\kernel\cpu\arm\cortex-m3 -I..\..\platform\LAUNCHXL-CC2640R2 -I..\..\platform\LAUNCHXL-CC2640R2\library\inc-I C:\Users\Hotriver\Desktop\新建文件夹\PortingContest\PortingContest\PortingContest_LAUNCHXL-CC2640R2_forlock\LiteOS_Kernel-master\projects\LAUNCHXL-CC2640R2-KEIL\RTE-I "D:\Program Files (x86)\Keil\MDK\PACK\TexasInstruments\CC13xxCC26xx\0.0.2\Device\Include"-I "D:\Program Files (x86)\Keil\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="517" -DRAM_SIZE_LEVEL_1 -DLAUNCHXL_CC2640R2-o .\los_queue.o --omf_browse .\los_queue.crf --depend .\los_queue.d)
+I (..\..\kernel\base\ipc\los_queue.inc)(0x58DE76A0)
+I (..\..\kernel\base\include\los_queue.ph)(0x58DE76A0)
+I (..\..\kernel\include\los_queue.h)(0x58DE76A0)
+I (..\..\kernel\include\los_base.h)(0x58DE76A0)
+I (..\..\kernel\link\keil\los_builddef.h)(0x58DE76A0)
+I (..\..\kernel\include\los_typedef.h)(0x5949296F)
+I (..\..\kernel\config\los_config.h)(0x591472E5)
+I (..\..\kernel\include\los_printf.h)(0x58DE76A0)
+I (D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\include\stdio.h)(0x55DB2B76)
+I (..\..\kernel\include\los_list.h)(0x58DE76A0)
+I (..\..\kernel\include\los_errno.h)(0x58DE76A0)
+I (..\..\kernel\base\include\los_membox.ph)(0x58DE76A0)
+I (..\..\kernel\include\los_membox.h)(0x58DE76A0)
+I (..\..\kernel\base\include\los_memory.ph)(0x58DE76A0)
+I (..\..\kernel\include\los_memory.h)(0x58DE76A0)
+I (..\..\kernel\base\include\los_priqueue.ph)(0x58DE76A0)
+I (..\..\kernel\include\los_priqueue.h)(0x58DE76A0)
+I (..\..\kernel\base\include\los_task.ph)(0x58DE76A0)
+I (..\..\kernel\include\los_task.h)(0x58DE76A0)
+I (..\..\kernel\include\los_sys.h)(0x58DE76A0)
+I (..\..\kernel\cpu\arm\cortex-m3\los_hwi.h)(0x58DE76A0)
+I (..\..\kernel\include\los_tick.h)(0x58DE76A0)
+I (..\..\kernel\include\los_event.h)(0x58DE76A0)
+I (..\..\kernel\cpu\arm\cortex-m3\los_hw.h)(0x58DE76A0)
+I (D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\include\string.h)(0x55DB2B78)
+F (..\..\kernel\base\ipc\los_sem.c)(0x58DE76A0)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\..\example\include -I..\..\kernel\include -I..\..\kernel\base\include -I..\..\kernel\link\keil -I..\..\kernel\cmsis -I..\..\kernel\config -I..\..\kernel\cpu\arm\cortex-m3 -I..\..\platform\LAUNCHXL-CC2640R2 -I..\..\platform\LAUNCHXL-CC2640R2\library\inc-I C:\Users\Hotriver\Desktop\新建文件夹\PortingContest\PortingContest\PortingContest_LAUNCHXL-CC2640R2_forlock\LiteOS_Kernel-master\projects\LAUNCHXL-CC2640R2-KEIL\RTE-I "D:\Program Files (x86)\Keil\MDK\PACK\TexasInstruments\CC13xxCC26xx\0.0.2\Device\Include"-I "D:\Program Files (x86)\Keil\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="517" -DRAM_SIZE_LEVEL_1 -DLAUNCHXL_CC2640R2-o .\los_sem.o --omf_browse .\los_sem.crf --depend .\los_sem.d)
+I (..\..\kernel\base\ipc\los_sem.inc)(0x58DE76A0)
+I (..\..\kernel\base\include\los_sem.ph)(0x58DE76A0)
+I (..\..\kernel\include\los_sem.h)(0x58DE76A0)
+I (..\..\kernel\include\los_base.h)(0x58DE76A0)
+I (..\..\kernel\link\keil\los_builddef.h)(0x58DE76A0)
+I (..\..\kernel\include\los_typedef.h)(0x5949296F)
+I (..\..\kernel\config\los_config.h)(0x591472E5)
+I (..\..\kernel\include\los_printf.h)(0x58DE76A0)
+I (D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\include\stdio.h)(0x55DB2B76)
+I (..\..\kernel\include\los_list.h)(0x58DE76A0)
+I (..\..\kernel\include\los_errno.h)(0x58DE76A0)
+I (..\..\kernel\include\los_task.h)(0x58DE76A0)
+I (..\..\kernel\include\los_sys.h)(0x58DE76A0)
+I (..\..\kernel\cpu\arm\cortex-m3\los_hwi.h)(0x58DE76A0)
+I (..\..\kernel\include\los_tick.h)(0x58DE76A0)
+I (..\..\kernel\include\los_event.h)(0x58DE76A0)
+I (..\..\kernel\base\include\los_base.ph)(0x58DE76A0)
+I (..\..\kernel\base\include\los_memory.ph)(0x58DE76A0)
+I (..\..\kernel\include\los_memory.h)(0x58DE76A0)
+I (..\..\kernel\base\include\los_priqueue.ph)(0x58DE76A0)
+I (..\..\kernel\include\los_priqueue.h)(0x58DE76A0)
+I (..\..\kernel\base\include\los_sys.ph)(0x58DE76A0)
+I (..\..\kernel\base\include\los_task.ph)(0x58DE76A0)
+I (..\..\kernel\cpu\arm\cortex-m3\los_hw.h)(0x58DE76A0)
+F (..\..\kernel\base\mem\los_membox.c)(0x58DE76A0)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\..\example\include -I..\..\kernel\include -I..\..\kernel\base\include -I..\..\kernel\link\keil -I..\..\kernel\cmsis -I..\..\kernel\config -I..\..\kernel\cpu\arm\cortex-m3 -I..\..\platform\LAUNCHXL-CC2640R2 -I..\..\platform\LAUNCHXL-CC2640R2\library\inc-I C:\Users\Hotriver\Desktop\新建文件夹\PortingContest\PortingContest\PortingContest_LAUNCHXL-CC2640R2_forlock\LiteOS_Kernel-master\projects\LAUNCHXL-CC2640R2-KEIL\RTE-I "D:\Program Files (x86)\Keil\MDK\PACK\TexasInstruments\CC13xxCC26xx\0.0.2\Device\Include"-I "D:\Program Files (x86)\Keil\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="517" -DRAM_SIZE_LEVEL_1 -DLAUNCHXL_CC2640R2-o .\los_membox.o --omf_browse .\los_membox.crf --depend .\los_membox.d)
+I (..\..\kernel\base\mem\los_membox.inc)(0x58DE76A0)
+I (..\..\kernel\base\include\los_membox.ph)(0x58DE76A0)
+I (..\..\kernel\include\los_membox.h)(0x58DE76A0)
+I (..\..\kernel\config\los_config.h)(0x591472E5)
+I (..\..\kernel\include\los_typedef.h)(0x5949296F)
+I (..\..\kernel\link\keil\los_builddef.h)(0x58DE76A0)
+I (..\..\kernel\include\los_printf.h)(0x58DE76A0)
+I (D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\include\stdio.h)(0x55DB2B76)
+I (..\..\kernel\base\include\los_base.ph)(0x58DE76A0)
+I (..\..\kernel\include\los_base.h)(0x58DE76A0)
+I (..\..\kernel\include\los_list.h)(0x58DE76A0)
+I (..\..\kernel\include\los_errno.h)(0x58DE76A0)
+I (..\..\kernel\cpu\arm\cortex-m3\los_hwi.h)(0x58DE76A0)
+I (..\..\kernel\include\los_sys.h)(0x58DE76A0)
+I (D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\include\string.h)(0x55DB2B78)
+F (..\..\kernel\base\mem\los_memory.c)(0x590F1496)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\..\example\include -I..\..\kernel\include -I..\..\kernel\base\include -I..\..\kernel\link\keil -I..\..\kernel\cmsis -I..\..\kernel\config -I..\..\kernel\cpu\arm\cortex-m3 -I..\..\platform\LAUNCHXL-CC2640R2 -I..\..\platform\LAUNCHXL-CC2640R2\library\inc-I C:\Users\Hotriver\Desktop\新建文件夹\PortingContest\PortingContest\PortingContest_LAUNCHXL-CC2640R2_forlock\LiteOS_Kernel-master\projects\LAUNCHXL-CC2640R2-KEIL\RTE-I "D:\Program Files (x86)\Keil\MDK\PACK\TexasInstruments\CC13xxCC26xx\0.0.2\Device\Include"-I "D:\Program Files (x86)\Keil\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="517" -DRAM_SIZE_LEVEL_1 -DLAUNCHXL_CC2640R2-o .\los_memory.o --omf_browse .\los_memory.crf --depend .\los_memory.d)
+I (..\..\kernel\base\mem\los_memory.inc)(0x58DE76A0)
+I (..\..\kernel\base\include\los_memory.ph)(0x58DE76A0)
+I (..\..\kernel\include\los_memory.h)(0x58DE76A0)
+I (..\..\kernel\include\los_base.h)(0x58DE76A0)
+I (..\..\kernel\link\keil\los_builddef.h)(0x58DE76A0)
+I (..\..\kernel\include\los_typedef.h)(0x5949296F)
+I (..\..\kernel\config\los_config.h)(0x591472E5)
+I (..\..\kernel\include\los_printf.h)(0x58DE76A0)
+I (D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\include\stdio.h)(0x55DB2B76)
+I (..\..\kernel\include\los_list.h)(0x58DE76A0)
+I (..\..\kernel\include\los_errno.h)(0x58DE76A0)
+I (..\..\kernel\base\include\los_multipledlinkhead.ph)(0x58DE76A0)
+I (..\..\kernel\include\los_multipledlinkhead.h)(0x58DE76A0)
+I (..\..\kernel\base\include\los_memstat.ph)(0x58DE76A0)
+I (..\..\kernel\base\include\los_task.ph)(0x58DE76A0)
+I (..\..\kernel\include\los_task.h)(0x58DE76A0)
+I (..\..\kernel\include\los_sys.h)(0x58DE76A0)
+I (..\..\kernel\cpu\arm\cortex-m3\los_hwi.h)(0x58DE76A0)
+I (..\..\kernel\include\los_tick.h)(0x58DE76A0)
+I (..\..\kernel\include\los_event.h)(0x58DE76A0)
+I (D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\include\string.h)(0x55DB2B78)
+F (..\..\kernel\base\mem\los_memstat.c)(0x58DE76A0)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\..\example\include -I..\..\kernel\include -I..\..\kernel\base\include -I..\..\kernel\link\keil -I..\..\kernel\cmsis -I..\..\kernel\config -I..\..\kernel\cpu\arm\cortex-m3 -I..\..\platform\LAUNCHXL-CC2640R2 -I..\..\platform\LAUNCHXL-CC2640R2\library\inc-I C:\Users\Hotriver\Desktop\新建文件夹\PortingContest\PortingContest\PortingContest_LAUNCHXL-CC2640R2_forlock\LiteOS_Kernel-master\projects\LAUNCHXL-CC2640R2-KEIL\RTE-I "D:\Program Files (x86)\Keil\MDK\PACK\TexasInstruments\CC13xxCC26xx\0.0.2\Device\Include"-I "D:\Program Files (x86)\Keil\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="517" -DRAM_SIZE_LEVEL_1 -DLAUNCHXL_CC2640R2-o .\los_memstat.o --omf_browse .\los_memstat.crf --depend .\los_memstat.d)
+I (..\..\kernel\base\mem\los_memstat.inc)(0x58DE76A0)
+I (..\..\kernel\base\include\los_memstat.ph)(0x58DE76A0)
+I (..\..\kernel\include\los_typedef.h)(0x5949296F)
+I (..\..\kernel\link\keil\los_builddef.h)(0x58DE76A0)
+I (..\..\kernel\base\include\los_task.ph)(0x58DE76A0)
+I (..\..\kernel\include\los_task.h)(0x58DE76A0)
+I (..\..\kernel\include\los_base.h)(0x58DE76A0)
+I (..\..\kernel\config\los_config.h)(0x591472E5)
+I (..\..\kernel\include\los_printf.h)(0x58DE76A0)
+I (D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\include\stdio.h)(0x55DB2B76)
+I (..\..\kernel\include\los_list.h)(0x58DE76A0)
+I (..\..\kernel\include\los_errno.h)(0x58DE76A0)
+I (..\..\kernel\include\los_sys.h)(0x58DE76A0)
+I (..\..\kernel\cpu\arm\cortex-m3\los_hwi.h)(0x58DE76A0)
+I (..\..\kernel\include\los_tick.h)(0x58DE76A0)
+I (..\..\kernel\include\los_event.h)(0x58DE76A0)
+F (..\..\kernel\base\mem\los_multipledlinkhead.c)(0x58DE76A0)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\..\example\include -I..\..\kernel\include -I..\..\kernel\base\include -I..\..\kernel\link\keil -I..\..\kernel\cmsis -I..\..\kernel\config -I..\..\kernel\cpu\arm\cortex-m3 -I..\..\platform\LAUNCHXL-CC2640R2 -I..\..\platform\LAUNCHXL-CC2640R2\library\inc-I C:\Users\Hotriver\Desktop\新建文件夹\PortingContest\PortingContest\PortingContest_LAUNCHXL-CC2640R2_forlock\LiteOS_Kernel-master\projects\LAUNCHXL-CC2640R2-KEIL\RTE-I "D:\Program Files (x86)\Keil\MDK\PACK\TexasInstruments\CC13xxCC26xx\0.0.2\Device\Include"-I "D:\Program Files (x86)\Keil\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="517" -DRAM_SIZE_LEVEL_1 -DLAUNCHXL_CC2640R2-o .\los_multipledlinkhead.o --omf_browse .\los_multipledlinkhead.crf --depend .\los_multipledlinkhead.d)
+I (..\..\kernel\base\mem\los_multipledlinkhead.inc)(0x58DE76A0)
+I (..\..\kernel\base\include\los_multipledlinkhead.ph)(0x58DE76A0)
+I (..\..\kernel\include\los_multipledlinkhead.h)(0x58DE76A0)
+I (..\..\kernel\include\los_base.h)(0x58DE76A0)
+I (..\..\kernel\link\keil\los_builddef.h)(0x58DE76A0)
+I (..\..\kernel\include\los_typedef.h)(0x5949296F)
+I (..\..\kernel\config\los_config.h)(0x591472E5)
+I (..\..\kernel\include\los_printf.h)(0x58DE76A0)
+I (D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\include\stdio.h)(0x55DB2B76)
+I (..\..\kernel\include\los_list.h)(0x58DE76A0)
+I (..\..\kernel\include\los_errno.h)(0x58DE76A0)
+F (..\..\kernel\base\misc\los_misc.c)(0x58DE76A0)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\..\example\include -I..\..\kernel\include -I..\..\kernel\base\include -I..\..\kernel\link\keil -I..\..\kernel\cmsis -I..\..\kernel\config -I..\..\kernel\cpu\arm\cortex-m3 -I..\..\platform\LAUNCHXL-CC2640R2 -I..\..\platform\LAUNCHXL-CC2640R2\library\inc-I C:\Users\Hotriver\Desktop\新建文件夹\PortingContest\PortingContest\PortingContest_LAUNCHXL-CC2640R2_forlock\LiteOS_Kernel-master\projects\LAUNCHXL-CC2640R2-KEIL\RTE-I "D:\Program Files (x86)\Keil\MDK\PACK\TexasInstruments\CC13xxCC26xx\0.0.2\Device\Include"-I "D:\Program Files (x86)\Keil\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="517" -DRAM_SIZE_LEVEL_1 -DLAUNCHXL_CC2640R2-o .\los_misc.o --omf_browse .\los_misc.crf --depend .\los_misc.d)
+I (..\..\kernel\base\include\los_base.ph)(0x58DE76A0)
+I (..\..\kernel\include\los_base.h)(0x58DE76A0)
+I (..\..\kernel\link\keil\los_builddef.h)(0x58DE76A0)
+I (..\..\kernel\include\los_typedef.h)(0x5949296F)
+I (..\..\kernel\config\los_config.h)(0x591472E5)
+I (..\..\kernel\include\los_printf.h)(0x58DE76A0)
+I (D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\include\stdio.h)(0x55DB2B76)
+I (..\..\kernel\include\los_list.h)(0x58DE76A0)
+I (..\..\kernel\include\los_errno.h)(0x58DE76A0)
+I (..\..\kernel\base\include\los_sys.ph)(0x58DE76A0)
+I (..\..\kernel\include\los_sys.h)(0x58DE76A0)
+I (..\..\kernel\cpu\arm\cortex-m3\los_hwi.h)(0x58DE76A0)
+I (..\..\kernel\base\include\los_task.ph)(0x58DE76A0)
+I (..\..\kernel\include\los_task.h)(0x58DE76A0)
+I (..\..\kernel\include\los_tick.h)(0x58DE76A0)
+I (..\..\kernel\include\los_event.h)(0x58DE76A0)
+F (..\..\kernel\config\los_config.c)(0x58DE76A0)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\..\example\include -I..\..\kernel\include -I..\..\kernel\base\include -I..\..\kernel\link\keil -I..\..\kernel\cmsis -I..\..\kernel\config -I..\..\kernel\cpu\arm\cortex-m3 -I..\..\platform\LAUNCHXL-CC2640R2 -I..\..\platform\LAUNCHXL-CC2640R2\library\inc-I C:\Users\Hotriver\Desktop\新建文件夹\PortingContest\PortingContest\PortingContest_LAUNCHXL-CC2640R2_forlock\LiteOS_Kernel-master\projects\LAUNCHXL-CC2640R2-KEIL\RTE-I "D:\Program Files (x86)\Keil\MDK\PACK\TexasInstruments\CC13xxCC26xx\0.0.2\Device\Include"-I "D:\Program Files (x86)\Keil\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="517" -DRAM_SIZE_LEVEL_1 -DLAUNCHXL_CC2640R2-o .\los_config.o --omf_browse .\los_config.crf --depend .\los_config.d)
+I (..\..\kernel\include\los_sys.h)(0x58DE76A0)
+I (..\..\kernel\include\los_base.h)(0x58DE76A0)
+I (..\..\kernel\link\keil\los_builddef.h)(0x58DE76A0)
+I (..\..\kernel\include\los_typedef.h)(0x5949296F)
+I (..\..\kernel\config\los_config.h)(0x591472E5)
+I (..\..\kernel\include\los_printf.h)(0x58DE76A0)
+I (D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\include\stdio.h)(0x55DB2B76)
+I (..\..\kernel\include\los_list.h)(0x58DE76A0)
+I (..\..\kernel\include\los_errno.h)(0x58DE76A0)
+I (..\..\kernel\cpu\arm\cortex-m3\los_hwi.h)(0x58DE76A0)
+I (..\..\kernel\include\los_tick.h)(0x58DE76A0)
+I (..\..\kernel\base\include\los_task.ph)(0x58DE76A0)
+I (..\..\kernel\include\los_task.h)(0x58DE76A0)
+I (..\..\kernel\include\los_event.h)(0x58DE76A0)
+F (..\..\kernel\cpu\arm\cortex-m3\los_hw.c)(0x58DE76A0)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\..\example\include -I..\..\kernel\include -I..\..\kernel\base\include -I..\..\kernel\link\keil -I..\..\kernel\cmsis -I..\..\kernel\config -I..\..\kernel\cpu\arm\cortex-m3 -I..\..\platform\LAUNCHXL-CC2640R2 -I..\..\platform\LAUNCHXL-CC2640R2\library\inc-I C:\Users\Hotriver\Desktop\新建文件夹\PortingContest\PortingContest\PortingContest_LAUNCHXL-CC2640R2_forlock\LiteOS_Kernel-master\projects\LAUNCHXL-CC2640R2-KEIL\RTE-I "D:\Program Files (x86)\Keil\MDK\PACK\TexasInstruments\CC13xxCC26xx\0.0.2\Device\Include"-I "D:\Program Files (x86)\Keil\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="517" -DRAM_SIZE_LEVEL_1 -DLAUNCHXL_CC2640R2-o .\los_hw.o --omf_browse .\los_hw.crf --depend .\los_hw.d)
+I (..\..\kernel\include\los_base.h)(0x58DE76A0)
+I (..\..\kernel\link\keil\los_builddef.h)(0x58DE76A0)
+I (..\..\kernel\include\los_typedef.h)(0x5949296F)
+I (..\..\kernel\config\los_config.h)(0x591472E5)
+I (..\..\kernel\include\los_printf.h)(0x58DE76A0)
+I (D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\include\stdio.h)(0x55DB2B76)
+I (..\..\kernel\include\los_list.h)(0x58DE76A0)
+I (..\..\kernel\include\los_errno.h)(0x58DE76A0)
+I (..\..\kernel\base\include\los_task.ph)(0x58DE76A0)
+I (..\..\kernel\include\los_task.h)(0x58DE76A0)
+I (..\..\kernel\include\los_sys.h)(0x58DE76A0)
+I (..\..\kernel\cpu\arm\cortex-m3\los_hwi.h)(0x58DE76A0)
+I (..\..\kernel\include\los_tick.h)(0x58DE76A0)
+I (..\..\kernel\include\los_event.h)(0x58DE76A0)
+I (..\..\kernel\cpu\arm\cortex-m3\los_hw.h)(0x58DE76A0)
+I (..\..\kernel\base\include\los_sys.ph)(0x58DE76A0)
+I (..\..\kernel\base\include\los_base.ph)(0x58DE76A0)
+I (..\..\kernel\base\include\los_priqueue.ph)(0x58DE76A0)
+I (..\..\kernel\include\los_priqueue.h)(0x58DE76A0)
+F (..\..\kernel\cpu\arm\cortex-m3\los_hw_tick.c)(0x58DE76A0)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\..\example\include -I..\..\kernel\include -I..\..\kernel\base\include -I..\..\kernel\link\keil -I..\..\kernel\cmsis -I..\..\kernel\config -I..\..\kernel\cpu\arm\cortex-m3 -I..\..\platform\LAUNCHXL-CC2640R2 -I..\..\platform\LAUNCHXL-CC2640R2\library\inc-I C:\Users\Hotriver\Desktop\新建文件夹\PortingContest\PortingContest\PortingContest_LAUNCHXL-CC2640R2_forlock\LiteOS_Kernel-master\projects\LAUNCHXL-CC2640R2-KEIL\RTE-I "D:\Program Files (x86)\Keil\MDK\PACK\TexasInstruments\CC13xxCC26xx\0.0.2\Device\Include"-I "D:\Program Files (x86)\Keil\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="517" -DRAM_SIZE_LEVEL_1 -DLAUNCHXL_CC2640R2-o .\los_hw_tick.o --omf_browse .\los_hw_tick.crf --depend .\los_hw_tick.d)
+I (..\..\kernel\base\include\los_tick.ph)(0x58DE76A0)
+I (..\..\kernel\include\los_tick.h)(0x58DE76A0)
+I (..\..\kernel\include\los_errno.h)(0x58DE76A0)
+I (..\..\kernel\include\los_typedef.h)(0x5949296F)
+I (..\..\kernel\link\keil\los_builddef.h)(0x58DE76A0)
+I (..\..\kernel\include\los_base.h)(0x58DE76A0)
+I (..\..\kernel\config\los_config.h)(0x591472E5)
+I (..\..\kernel\include\los_printf.h)(0x58DE76A0)
+I (D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\include\stdio.h)(0x55DB2B76)
+I (..\..\kernel\include\los_list.h)(0x58DE76A0)
+I (..\..\kernel\base\include\los_task.ph)(0x58DE76A0)
+I (..\..\kernel\include\los_task.h)(0x58DE76A0)
+I (..\..\kernel\include\los_sys.h)(0x58DE76A0)
+I (..\..\kernel\cpu\arm\cortex-m3\los_hwi.h)(0x58DE76A0)
+I (..\..\kernel\include\los_event.h)(0x58DE76A0)
+I (..\..\kernel\include\los_swtmr.h)(0x58DE76A0)
+F (..\..\kernel\cpu\arm\cortex-m3\los_hwi.c)(0x58DE76A0)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\..\example\include -I..\..\kernel\include -I..\..\kernel\base\include -I..\..\kernel\link\keil -I..\..\kernel\cmsis -I..\..\kernel\config -I..\..\kernel\cpu\arm\cortex-m3 -I..\..\platform\LAUNCHXL-CC2640R2 -I..\..\platform\LAUNCHXL-CC2640R2\library\inc-I C:\Users\Hotriver\Desktop\新建文件夹\PortingContest\PortingContest\PortingContest_LAUNCHXL-CC2640R2_forlock\LiteOS_Kernel-master\projects\LAUNCHXL-CC2640R2-KEIL\RTE-I "D:\Program Files (x86)\Keil\MDK\PACK\TexasInstruments\CC13xxCC26xx\0.0.2\Device\Include"-I "D:\Program Files (x86)\Keil\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="517" -DRAM_SIZE_LEVEL_1 -DLAUNCHXL_CC2640R2-o .\los_hwi.o --omf_browse .\los_hwi.crf --depend .\los_hwi.d)
+I (..\..\kernel\cpu\arm\cortex-m3\los_hwi.h)(0x58DE76A0)
+I (..\..\kernel\include\los_base.h)(0x58DE76A0)
+I (..\..\kernel\link\keil\los_builddef.h)(0x58DE76A0)
+I (..\..\kernel\include\los_typedef.h)(0x5949296F)
+I (..\..\kernel\config\los_config.h)(0x591472E5)
+I (..\..\kernel\include\los_printf.h)(0x58DE76A0)
+I (D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\include\stdio.h)(0x55DB2B76)
+I (..\..\kernel\include\los_list.h)(0x58DE76A0)
+I (..\..\kernel\include\los_errno.h)(0x58DE76A0)
+I (..\..\kernel\include\los_sys.h)(0x58DE76A0)
+F (..\..\kernel\cpu\arm\cortex-m3\los_dispatch_keil.s)(0x58DE76A0)(--cpu Cortex-M3 -g --apcs=interwork -I C:\Users\Hotriver\Desktop\新建文件夹\PortingContest\PortingContest\PortingContest_LAUNCHXL-CC2640R2_forlock\LiteOS_Kernel-master\projects\LAUNCHXL-CC2640R2-KEIL\RTE-I "D:\Program Files (x86)\Keil\MDK\PACK\TexasInstruments\CC13xxCC26xx\0.0.2\Device\Include"-I "D:\Program Files (x86)\Keil\MDK\ARM\CMSIS\Include"--pd "__UVISION_VERSION SETA 517"--list .\los_dispatch_keil.lst --xref -o .\los_dispatch_keil.o --depend .\los_dispatch_keil.d)
+F (..\..\kernel\cmsis\cmsis_liteos.c)(0x58DE76A0)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\..\example\include -I..\..\kernel\include -I..\..\kernel\base\include -I..\..\kernel\link\keil -I..\..\kernel\cmsis -I..\..\kernel\config -I..\..\kernel\cpu\arm\cortex-m3 -I..\..\platform\LAUNCHXL-CC2640R2 -I..\..\platform\LAUNCHXL-CC2640R2\library\inc-I C:\Users\Hotriver\Desktop\新建文件夹\PortingContest\PortingContest\PortingContest_LAUNCHXL-CC2640R2_forlock\LiteOS_Kernel-master\projects\LAUNCHXL-CC2640R2-KEIL\RTE-I "D:\Program Files (x86)\Keil\MDK\PACK\TexasInstruments\CC13xxCC26xx\0.0.2\Device\Include"-I "D:\Program Files (x86)\Keil\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="517" -DRAM_SIZE_LEVEL_1 -DLAUNCHXL_CC2640R2-o .\cmsis_liteos.o --omf_browse .\cmsis_liteos.crf --depend .\cmsis_liteos.d)
+I (..\..\kernel\cmsis\cmsis_os.h)(0x58DE76A0)
+I (D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\include\stdint.h)(0x55DB2B80)
+I (D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\include\stddef.h)(0x55DB2B7E)
+I (..\..\kernel\include\los_event.h)(0x58DE76A0)
+I (..\..\kernel\include\los_base.h)(0x58DE76A0)
+I (..\..\kernel\link\keil\los_builddef.h)(0x58DE76A0)
+I (..\..\kernel\include\los_typedef.h)(0x5949296F)
+I (..\..\kernel\config\los_config.h)(0x591472E5)
+I (..\..\kernel\include\los_printf.h)(0x58DE76A0)
+I (D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\include\stdio.h)(0x55DB2B76)
+I (..\..\kernel\include\los_list.h)(0x58DE76A0)
+I (..\..\kernel\include\los_errno.h)(0x58DE76A0)
+I (..\..\kernel\include\los_membox.h)(0x58DE76A0)
+I (..\..\kernel\cpu\arm\cortex-m3\los_hwi.h)(0x58DE76A0)
+I (..\..\kernel\include\los_sys.h)(0x58DE76A0)
+I (..\..\kernel\base\include\los_mux.ph)(0x58DE76A0)
+I (..\..\kernel\base\include\los_task.ph)(0x58DE76A0)
+I (..\..\kernel\include\los_task.h)(0x58DE76A0)
+I (..\..\kernel\include\los_tick.h)(0x58DE76A0)
+I (..\..\kernel\include\los_mux.h)(0x58DE76A0)
+I (..\..\kernel\base\include\los_queue.ph)(0x58DE76A0)
+I (..\..\kernel\include\los_queue.h)(0x58DE76A0)
+I (..\..\kernel\base\include\los_sem.ph)(0x58DE76A0)
+I (..\..\kernel\include\los_sem.h)(0x58DE76A0)
+I (..\..\kernel\base\include\los_swtmr.ph)(0x58DE76A0)
+I (..\..\kernel\include\los_swtmr.h)(0x58DE76A0)
+I (..\..\kernel\base\include\los_sys.ph)(0x58DE76A0)
+I (..\..\kernel\base\include\los_base.ph)(0x58DE76A0)
+I (..\..\kernel\base\include\los_tick.ph)(0x58DE76A0)
+I (D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\include\string.h)(0x55DB2B78)
+F (..\..\platform\LAUNCHXL-CC2640R2\los_bsp_adapter.c)(0x59106CA9)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\..\example\include -I..\..\kernel\include -I..\..\kernel\base\include -I..\..\kernel\link\keil -I..\..\kernel\cmsis -I..\..\kernel\config -I..\..\kernel\cpu\arm\cortex-m3 -I..\..\platform\LAUNCHXL-CC2640R2 -I..\..\platform\LAUNCHXL-CC2640R2\library\inc-I C:\Users\Hotriver\Desktop\新建文件夹\PortingContest\PortingContest\PortingContest_LAUNCHXL-CC2640R2_forlock\LiteOS_Kernel-master\projects\LAUNCHXL-CC2640R2-KEIL\RTE-I "D:\Program Files (x86)\Keil\MDK\PACK\TexasInstruments\CC13xxCC26xx\0.0.2\Device\Include"-I "D:\Program Files (x86)\Keil\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="517" -DRAM_SIZE_LEVEL_1 -DLAUNCHXL_CC2640R2-o .\los_bsp_adapter.o --omf_browse .\los_bsp_adapter.crf --depend .\los_bsp_adapter.d)
+I (D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\include\stdio.h)(0x55DB2B76)
+I (D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\include\string.h)(0x55DB2B78)
+I (..\..\platform\LAUNCHXL-CC2640R2\los_bsp_adapter.h)(0x58DE76A0)
+I (..\..\platform\LAUNCHXL-CC2640R2\los_bsp_led.h)(0x594D26F3)
+I (..\..\platform\LAUNCHXL-CC2640R2\los_bsp_key.h)(0x590B3319)
+I (..\..\platform\LAUNCHXL-CC2640R2\los_bsp_uart.h)(0x58DE76A0)
+I (..\..\kernel\base\include\los_tick.ph)(0x58DE76A0)
+I (..\..\kernel\include\los_tick.h)(0x58DE76A0)
+I (..\..\kernel\include\los_errno.h)(0x58DE76A0)
+I (..\..\kernel\include\los_typedef.h)(0x5949296F)
+I (..\..\kernel\link\keil\los_builddef.h)(0x58DE76A0)
+I (..\..\kernel\include\los_base.h)(0x58DE76A0)
+I (..\..\kernel\config\los_config.h)(0x591472E5)
+I (..\..\kernel\include\los_printf.h)(0x58DE76A0)
+I (..\..\kernel\include\los_list.h)(0x58DE76A0)
+I (..\..\kernel\base\include\los_task.ph)(0x58DE76A0)
+I (..\..\kernel\include\los_task.h)(0x58DE76A0)
+I (..\..\kernel\include\los_sys.h)(0x58DE76A0)
+I (..\..\kernel\cpu\arm\cortex-m3\los_hwi.h)(0x58DE76A0)
+I (..\..\kernel\include\los_event.h)(0x58DE76A0)
+I (..\..\kernel\include\los_swtmr.h)(0x58DE76A0)
+F (..\..\platform\LAUNCHXL-CC2640R2\los_bsp_key.c)(0x59553D44)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\..\example\include -I..\..\kernel\include -I..\..\kernel\base\include -I..\..\kernel\link\keil -I..\..\kernel\cmsis -I..\..\kernel\config -I..\..\kernel\cpu\arm\cortex-m3 -I..\..\platform\LAUNCHXL-CC2640R2 -I..\..\platform\LAUNCHXL-CC2640R2\library\inc-I C:\Users\Hotriver\Desktop\新建文件夹\PortingContest\PortingContest\PortingContest_LAUNCHXL-CC2640R2_forlock\LiteOS_Kernel-master\projects\LAUNCHXL-CC2640R2-KEIL\RTE-I "D:\Program Files (x86)\Keil\MDK\PACK\TexasInstruments\CC13xxCC26xx\0.0.2\Device\Include"-I "D:\Program Files (x86)\Keil\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="517" -DRAM_SIZE_LEVEL_1 -DLAUNCHXL_CC2640R2-o .\los_bsp_key.o --omf_browse .\los_bsp_key.crf --depend .\los_bsp_key.d)
+I (..\..\platform\LAUNCHXL-CC2640R2\los_bsp_key.h)(0x590B3319)
+I (D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\include\stdint.h)(0x55DB2B80)
+F (..\..\platform\LAUNCHXL-CC2640R2\los_bsp_led.c)(0x59553887)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\..\example\include -I..\..\kernel\include -I..\..\kernel\base\include -I..\..\kernel\link\keil -I..\..\kernel\cmsis -I..\..\kernel\config -I..\..\kernel\cpu\arm\cortex-m3 -I..\..\platform\LAUNCHXL-CC2640R2 -I..\..\platform\LAUNCHXL-CC2640R2\library\inc-I C:\Users\Hotriver\Desktop\新建文件夹\PortingContest\PortingContest\PortingContest_LAUNCHXL-CC2640R2_forlock\LiteOS_Kernel-master\projects\LAUNCHXL-CC2640R2-KEIL\RTE-I "D:\Program Files (x86)\Keil\MDK\PACK\TexasInstruments\CC13xxCC26xx\0.0.2\Device\Include"-I "D:\Program Files (x86)\Keil\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="517" -DRAM_SIZE_LEVEL_1 -DLAUNCHXL_CC2640R2-o .\los_bsp_led.o --omf_browse .\los_bsp_led.crf --depend .\los_bsp_led.d)
+I (..\..\platform\LAUNCHXL-CC2640R2\los_bsp_led.h)(0x594D26F3)
+I (D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\include\stdint.h)(0x55DB2B80)
+F (..\..\platform\LAUNCHXL-CC2640R2\los_bsp_uart.c)(0x5955450C)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\..\example\include -I..\..\kernel\include -I..\..\kernel\base\include -I..\..\kernel\link\keil -I..\..\kernel\cmsis -I..\..\kernel\config -I..\..\kernel\cpu\arm\cortex-m3 -I..\..\platform\LAUNCHXL-CC2640R2 -I..\..\platform\LAUNCHXL-CC2640R2\library\inc-I C:\Users\Hotriver\Desktop\新建文件夹\PortingContest\PortingContest\PortingContest_LAUNCHXL-CC2640R2_forlock\LiteOS_Kernel-master\projects\LAUNCHXL-CC2640R2-KEIL\RTE-I "D:\Program Files (x86)\Keil\MDK\PACK\TexasInstruments\CC13xxCC26xx\0.0.2\Device\Include"-I "D:\Program Files (x86)\Keil\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="517" -DRAM_SIZE_LEVEL_1 -DLAUNCHXL_CC2640R2-o .\los_bsp_uart.o --omf_browse .\los_bsp_uart.crf --depend .\los_bsp_uart.d)
+I (..\..\platform\LAUNCHXL-CC2640R2\los_bsp_uart.h)(0x58DE76A0)
+I (D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\include\stdarg.h)(0x55DB2B7E)
+I (D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\include\stdio.h)(0x55DB2B76)
+I (D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\include\stdint.h)(0x55DB2B80)
+F (..\..\platform\LAUNCHXL-CC2640R2\library\ccfg.c)(0x58D2FEA8)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\..\example\include -I..\..\kernel\include -I..\..\kernel\base\include -I..\..\kernel\link\keil -I..\..\kernel\cmsis -I..\..\kernel\config -I..\..\kernel\cpu\arm\cortex-m3 -I..\..\platform\LAUNCHXL-CC2640R2 -I..\..\platform\LAUNCHXL-CC2640R2\library\inc-I C:\Users\Hotriver\Desktop\新建文件夹\PortingContest\PortingContest\PortingContest_LAUNCHXL-CC2640R2_forlock\LiteOS_Kernel-master\projects\LAUNCHXL-CC2640R2-KEIL\RTE-I "D:\Program Files (x86)\Keil\MDK\PACK\TexasInstruments\CC13xxCC26xx\0.0.2\Device\Include"-I "D:\Program Files (x86)\Keil\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="517" -DRAM_SIZE_LEVEL_1 -DLAUNCHXL_CC2640R2-o .\ccfg.o --omf_browse .\ccfg.crf --depend .\ccfg.d)
+I (D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\include\stdint.h)(0x55DB2B80)
+I (..\..\platform\LAUNCHXL-CC2640R2\library\inc\../inc/hw_types.h)(0x58D2FEA7)
+I (D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\include\stdbool.h)(0x55DB2B76)
+I (..\..\platform\LAUNCHXL-CC2640R2\library\inc\../inc/../inc/hw_chip_def.h)(0x58D2FEA6)
+I (..\..\platform\LAUNCHXL-CC2640R2\library\inc\../inc/hw_ccfg.h)(0x58D2FEA6)
+I (..\..\platform\LAUNCHXL-CC2640R2\library\inc\../inc/hw_ccfg_simple_struct.h)(0x58D2FEA6)
+F (..\..\platform\LAUNCHXL-CC2640R2\library\startup_keil.s)(0x595275DB)(--cpu Cortex-M3 -g --apcs=interwork -I C:\Users\Hotriver\Desktop\新建文件夹\PortingContest\PortingContest\PortingContest_LAUNCHXL-CC2640R2_forlock\LiteOS_Kernel-master\projects\LAUNCHXL-CC2640R2-KEIL\RTE-I "D:\Program Files (x86)\Keil\MDK\PACK\TexasInstruments\CC13xxCC26xx\0.0.2\Device\Include"-I "D:\Program Files (x86)\Keil\MDK\ARM\CMSIS\Include"--pd "__UVISION_VERSION SETA 517"--list .\startup_keil.lst --xref -o .\startup_keil.o --depend .\startup_keil.d)
+F (..\..\user\main.c)(0x59492A8C)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\..\example\include -I..\..\kernel\include -I..\..\kernel\base\include -I..\..\kernel\link\keil -I..\..\kernel\cmsis -I..\..\kernel\config -I..\..\kernel\cpu\arm\cortex-m3 -I..\..\platform\LAUNCHXL-CC2640R2 -I..\..\platform\LAUNCHXL-CC2640R2\library\inc-I C:\Users\Hotriver\Desktop\新建文件夹\PortingContest\PortingContest\PortingContest_LAUNCHXL-CC2640R2_forlock\LiteOS_Kernel-master\projects\LAUNCHXL-CC2640R2-KEIL\RTE-I "D:\Program Files (x86)\Keil\MDK\PACK\TexasInstruments\CC13xxCC26xx\0.0.2\Device\Include"-I "D:\Program Files (x86)\Keil\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="517" -DRAM_SIZE_LEVEL_1 -DLAUNCHXL_CC2640R2-o .\main.o --omf_browse .\main.crf --depend .\main.d)
+I (..\..\kernel\include\los_sys.h)(0x58DE76A0)
+I (..\..\kernel\include\los_base.h)(0x58DE76A0)
+I (..\..\kernel\link\keil\los_builddef.h)(0x58DE76A0)
+I (..\..\kernel\include\los_typedef.h)(0x5949296F)
+I (..\..\kernel\config\los_config.h)(0x591472E5)
+I (..\..\kernel\include\los_printf.h)(0x58DE76A0)
+I (D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\include\stdio.h)(0x55DB2B76)
+I (..\..\kernel\include\los_list.h)(0x58DE76A0)
+I (..\..\kernel\include\los_errno.h)(0x58DE76A0)
+I (..\..\kernel\cpu\arm\cortex-m3\los_hwi.h)(0x58DE76A0)
+I (..\..\kernel\include\los_tick.h)(0x58DE76A0)
+I (..\..\kernel\base\include\los_task.ph)(0x58DE76A0)
+I (..\..\kernel\include\los_task.h)(0x58DE76A0)
+I (..\..\kernel\include\los_event.h)(0x58DE76A0)
+I (..\..\platform\LAUNCHXL-CC2640R2\los_bsp_led.h)(0x594D26F3)
+I (..\..\platform\LAUNCHXL-CC2640R2\los_bsp_key.h)(0x590B3319)
+I (..\..\platform\LAUNCHXL-CC2640R2\los_bsp_uart.h)(0x58DE76A0)
+I (..\..\example\include\los_inspect_entry.h)(0x58DE76A0)
+I (..\..\example\include\los_demo_entry.h)(0x58DE76A0)
+I (..\..\example\include\los_demo_debug.h)(0x590C7220)
+I (D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\include\string.h)(0x55DB2B78)
+I (..\..\example\include\los_api_task.h)(0x58DE76A0)
+I (..\..\example\include\los_api_dynamic_mem.h)(0x58DE76A0)
+I (..\..\example\include\los_api_static_mem.h)(0x58DE76A0)
+I (..\..\example\include\los_api_interrupt.h)(0x58DE76A0)
+I (..\..\example\include\los_api_msgqueue.h)(0x58DE76A0)
+I (..\..\example\include\los_api_event.h)(0x58DE76A0)
+I (..\..\example\include\los_api_mutex.h)(0x58DE76A0)
+I (..\..\example\include\los_api_sem.h)(0x58DE76A0)
+I (..\..\example\include\los_api_timer.h)(0x58DE76A0)
+I (..\..\example\include\los_api_systick.h)(0x58DE76A0)
+I (..\..\example\include\los_api_list.h)(0x58DE76A0)
+F (..\..\example\api\los_api_dynamic_mem.c)(0x58DE76A0)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\..\example\include -I..\..\kernel\include -I..\..\kernel\base\include -I..\..\kernel\link\keil -I..\..\kernel\cmsis -I..\..\kernel\config -I..\..\kernel\cpu\arm\cortex-m3 -I..\..\platform\LAUNCHXL-CC2640R2 -I..\..\platform\LAUNCHXL-CC2640R2\library\inc-I C:\Users\Hotriver\Desktop\新建文件夹\PortingContest\PortingContest\PortingContest_LAUNCHXL-CC2640R2_forlock\LiteOS_Kernel-master\projects\LAUNCHXL-CC2640R2-KEIL\RTE-I "D:\Program Files (x86)\Keil\MDK\PACK\TexasInstruments\CC13xxCC26xx\0.0.2\Device\Include"-I "D:\Program Files (x86)\Keil\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="517" -DRAM_SIZE_LEVEL_1 -DLAUNCHXL_CC2640R2-o .\los_api_dynamic_mem.o --omf_browse .\los_api_dynamic_mem.crf --depend .\los_api_dynamic_mem.d)
+I (D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\include\stdlib.h)(0x55DB2B78)
+I (..\..\kernel\config\los_config.h)(0x591472E5)
+I (..\..\kernel\include\los_typedef.h)(0x5949296F)
+I (..\..\kernel\link\keil\los_builddef.h)(0x58DE76A0)
+I (..\..\kernel\include\los_printf.h)(0x58DE76A0)
+I (D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\include\stdio.h)(0x55DB2B76)
+I (..\..\kernel\include\los_memory.h)(0x58DE76A0)
+I (..\..\kernel\include\los_base.h)(0x58DE76A0)
+I (..\..\kernel\include\los_list.h)(0x58DE76A0)
+I (..\..\kernel\include\los_errno.h)(0x58DE76A0)
+I (..\..\example\include\los_api_dynamic_mem.h)(0x58DE76A0)
+I (..\..\example\include\los_demo_debug.h)(0x590C7220)
+I (D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\include\string.h)(0x55DB2B78)
+I (..\..\example\include\los_inspect_entry.h)(0x58DE76A0)
+F (..\..\example\api\los_api_event.c)(0x58DE76A0)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\..\example\include -I..\..\kernel\include -I..\..\kernel\base\include -I..\..\kernel\link\keil -I..\..\kernel\cmsis -I..\..\kernel\config -I..\..\kernel\cpu\arm\cortex-m3 -I..\..\platform\LAUNCHXL-CC2640R2 -I..\..\platform\LAUNCHXL-CC2640R2\library\inc-I C:\Users\Hotriver\Desktop\新建文件夹\PortingContest\PortingContest\PortingContest_LAUNCHXL-CC2640R2_forlock\LiteOS_Kernel-master\projects\LAUNCHXL-CC2640R2-KEIL\RTE-I "D:\Program Files (x86)\Keil\MDK\PACK\TexasInstruments\CC13xxCC26xx\0.0.2\Device\Include"-I "D:\Program Files (x86)\Keil\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="517" -DRAM_SIZE_LEVEL_1 -DLAUNCHXL_CC2640R2-o .\los_api_event.o --omf_browse .\los_api_event.crf --depend .\los_api_event.d)
+I (..\..\kernel\include\los_event.h)(0x58DE76A0)
+I (..\..\kernel\include\los_base.h)(0x58DE76A0)
+I (..\..\kernel\link\keil\los_builddef.h)(0x58DE76A0)
+I (..\..\kernel\include\los_typedef.h)(0x5949296F)
+I (..\..\kernel\config\los_config.h)(0x591472E5)
+I (..\..\kernel\include\los_printf.h)(0x58DE76A0)
+I (D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\include\stdio.h)(0x55DB2B76)
+I (..\..\kernel\include\los_list.h)(0x58DE76A0)
+I (..\..\kernel\include\los_errno.h)(0x58DE76A0)
+I (..\..\kernel\include\los_task.h)(0x58DE76A0)
+I (..\..\kernel\include\los_sys.h)(0x58DE76A0)
+I (..\..\kernel\cpu\arm\cortex-m3\los_hwi.h)(0x58DE76A0)
+I (..\..\kernel\include\los_tick.h)(0x58DE76A0)
+I (..\..\example\include\los_api_event.h)(0x58DE76A0)
+I (..\..\example\include\los_demo_debug.h)(0x590C7220)
+I (D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\include\string.h)(0x55DB2B78)
+I (..\..\example\include\los_inspect_entry.h)(0x58DE76A0)
+F (..\..\example\api\los_api_interrupt.c)(0x58DE76A0)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\..\example\include -I..\..\kernel\include -I..\..\kernel\base\include -I..\..\kernel\link\keil -I..\..\kernel\cmsis -I..\..\kernel\config -I..\..\kernel\cpu\arm\cortex-m3 -I..\..\platform\LAUNCHXL-CC2640R2 -I..\..\platform\LAUNCHXL-CC2640R2\library\inc-I C:\Users\Hotriver\Desktop\新建文件夹\PortingContest\PortingContest\PortingContest_LAUNCHXL-CC2640R2_forlock\LiteOS_Kernel-master\projects\LAUNCHXL-CC2640R2-KEIL\RTE-I "D:\Program Files (x86)\Keil\MDK\PACK\TexasInstruments\CC13xxCC26xx\0.0.2\Device\Include"-I "D:\Program Files (x86)\Keil\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="517" -DRAM_SIZE_LEVEL_1 -DLAUNCHXL_CC2640R2-o .\los_api_interrupt.o --omf_browse .\los_api_interrupt.crf --depend .\los_api_interrupt.d)
+I (..\..\kernel\cpu\arm\cortex-m3\los_hwi.h)(0x58DE76A0)
+I (..\..\kernel\include\los_base.h)(0x58DE76A0)
+I (..\..\kernel\link\keil\los_builddef.h)(0x58DE76A0)
+I (..\..\kernel\include\los_typedef.h)(0x5949296F)
+I (..\..\kernel\config\los_config.h)(0x591472E5)
+I (..\..\kernel\include\los_printf.h)(0x58DE76A0)
+I (D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\include\stdio.h)(0x55DB2B76)
+I (..\..\kernel\include\los_list.h)(0x58DE76A0)
+I (..\..\kernel\include\los_errno.h)(0x58DE76A0)
+I (..\..\kernel\include\los_sys.h)(0x58DE76A0)
+I (..\..\example\include\los_api_interrupt.h)(0x58DE76A0)
+I (..\..\example\include\los_demo_debug.h)(0x590C7220)
+I (D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\include\string.h)(0x55DB2B78)
+I (..\..\example\include\los_inspect_entry.h)(0x58DE76A0)
+F (..\..\example\api\los_api_list.c)(0x58DE76A0)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\..\example\include -I..\..\kernel\include -I..\..\kernel\base\include -I..\..\kernel\link\keil -I..\..\kernel\cmsis -I..\..\kernel\config -I..\..\kernel\cpu\arm\cortex-m3 -I..\..\platform\LAUNCHXL-CC2640R2 -I..\..\platform\LAUNCHXL-CC2640R2\library\inc-I C:\Users\Hotriver\Desktop\新建文件夹\PortingContest\PortingContest\PortingContest_LAUNCHXL-CC2640R2_forlock\LiteOS_Kernel-master\projects\LAUNCHXL-CC2640R2-KEIL\RTE-I "D:\Program Files (x86)\Keil\MDK\PACK\TexasInstruments\CC13xxCC26xx\0.0.2\Device\Include"-I "D:\Program Files (x86)\Keil\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="517" -DRAM_SIZE_LEVEL_1 -DLAUNCHXL_CC2640R2-o .\los_api_list.o --omf_browse .\los_api_list.crf --depend .\los_api_list.d)
+I (..\..\kernel\include\los_list.h)(0x58DE76A0)
+I (..\..\kernel\include\los_base.h)(0x58DE76A0)
+I (..\..\kernel\link\keil\los_builddef.h)(0x58DE76A0)
+I (..\..\kernel\include\los_typedef.h)(0x5949296F)
+I (..\..\kernel\config\los_config.h)(0x591472E5)
+I (..\..\kernel\include\los_printf.h)(0x58DE76A0)
+I (D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\include\stdio.h)(0x55DB2B76)
+I (..\..\kernel\include\los_errno.h)(0x58DE76A0)
+I (D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\include\stdlib.h)(0x55DB2B78)
+I (..\..\kernel\include\los_memory.h)(0x58DE76A0)
+I (..\..\example\include\los_api_list.h)(0x58DE76A0)
+I (..\..\example\include\los_demo_debug.h)(0x590C7220)
+I (D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\include\string.h)(0x55DB2B78)
+I (..\..\example\include\los_inspect_entry.h)(0x58DE76A0)
+F (..\..\example\api\los_api_msgqueue.c)(0x5901F9A2)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\..\example\include -I..\..\kernel\include -I..\..\kernel\base\include -I..\..\kernel\link\keil -I..\..\kernel\cmsis -I..\..\kernel\config -I..\..\kernel\cpu\arm\cortex-m3 -I..\..\platform\LAUNCHXL-CC2640R2 -I..\..\platform\LAUNCHXL-CC2640R2\library\inc-I C:\Users\Hotriver\Desktop\新建文件夹\PortingContest\PortingContest\PortingContest_LAUNCHXL-CC2640R2_forlock\LiteOS_Kernel-master\projects\LAUNCHXL-CC2640R2-KEIL\RTE-I "D:\Program Files (x86)\Keil\MDK\PACK\TexasInstruments\CC13xxCC26xx\0.0.2\Device\Include"-I "D:\Program Files (x86)\Keil\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="517" -DRAM_SIZE_LEVEL_1 -DLAUNCHXL_CC2640R2-o .\los_api_msgqueue.o --omf_browse .\los_api_msgqueue.crf --depend .\los_api_msgqueue.d)
+I (..\..\kernel\include\los_base.h)(0x58DE76A0)
+I (..\..\kernel\link\keil\los_builddef.h)(0x58DE76A0)
+I (..\..\kernel\include\los_typedef.h)(0x5949296F)
+I (..\..\kernel\config\los_config.h)(0x591472E5)
+I (..\..\kernel\include\los_printf.h)(0x58DE76A0)
+I (D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\include\stdio.h)(0x55DB2B76)
+I (..\..\kernel\include\los_list.h)(0x58DE76A0)
+I (..\..\kernel\include\los_errno.h)(0x58DE76A0)
+I (..\..\kernel\include\los_task.h)(0x58DE76A0)
+I (..\..\kernel\include\los_sys.h)(0x58DE76A0)
+I (..\..\kernel\cpu\arm\cortex-m3\los_hwi.h)(0x58DE76A0)
+I (..\..\kernel\include\los_tick.h)(0x58DE76A0)
+I (..\..\kernel\include\los_event.h)(0x58DE76A0)
+I (..\..\kernel\include\los_swtmr.h)(0x58DE76A0)
+I (..\..\kernel\include\los_queue.h)(0x58DE76A0)
+I (..\..\example\include\los_api_msgqueue.h)(0x58DE76A0)
+I (..\..\example\include\los_demo_debug.h)(0x590C7220)
+I (D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\include\string.h)(0x55DB2B78)
+I (..\..\example\include\los_inspect_entry.h)(0x58DE76A0)
+F (..\..\example\api\los_api_mutex.c)(0x58DE76A0)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\..\example\include -I..\..\kernel\include -I..\..\kernel\base\include -I..\..\kernel\link\keil -I..\..\kernel\cmsis -I..\..\kernel\config -I..\..\kernel\cpu\arm\cortex-m3 -I..\..\platform\LAUNCHXL-CC2640R2 -I..\..\platform\LAUNCHXL-CC2640R2\library\inc-I C:\Users\Hotriver\Desktop\新建文件夹\PortingContest\PortingContest\PortingContest_LAUNCHXL-CC2640R2_forlock\LiteOS_Kernel-master\projects\LAUNCHXL-CC2640R2-KEIL\RTE-I "D:\Program Files (x86)\Keil\MDK\PACK\TexasInstruments\CC13xxCC26xx\0.0.2\Device\Include"-I "D:\Program Files (x86)\Keil\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="517" -DRAM_SIZE_LEVEL_1 -DLAUNCHXL_CC2640R2-o .\los_api_mutex.o --omf_browse .\los_api_mutex.crf --depend .\los_api_mutex.d)
+I (..\..\kernel\include\los_mux.h)(0x58DE76A0)
+I (..\..\kernel\include\los_base.h)(0x58DE76A0)
+I (..\..\kernel\link\keil\los_builddef.h)(0x58DE76A0)
+I (..\..\kernel\include\los_typedef.h)(0x5949296F)
+I (..\..\kernel\config\los_config.h)(0x591472E5)
+I (..\..\kernel\include\los_printf.h)(0x58DE76A0)
+I (D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\include\stdio.h)(0x55DB2B76)
+I (..\..\kernel\include\los_list.h)(0x58DE76A0)
+I (..\..\kernel\include\los_errno.h)(0x58DE76A0)
+I (..\..\kernel\include\los_sys.h)(0x58DE76A0)
+I (..\..\kernel\cpu\arm\cortex-m3\los_hwi.h)(0x58DE76A0)
+I (..\..\kernel\include\los_task.h)(0x58DE76A0)
+I (..\..\kernel\include\los_tick.h)(0x58DE76A0)
+I (..\..\kernel\include\los_event.h)(0x58DE76A0)
+I (..\..\example\include\los_api_mutex.h)(0x58DE76A0)
+I (..\..\example\include\los_demo_debug.h)(0x590C7220)
+I (D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\include\string.h)(0x55DB2B78)
+I (..\..\example\include\los_inspect_entry.h)(0x58DE76A0)
+F (..\..\example\api\los_api_sem.c)(0x58DE76A0)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\..\example\include -I..\..\kernel\include -I..\..\kernel\base\include -I..\..\kernel\link\keil -I..\..\kernel\cmsis -I..\..\kernel\config -I..\..\kernel\cpu\arm\cortex-m3 -I..\..\platform\LAUNCHXL-CC2640R2 -I..\..\platform\LAUNCHXL-CC2640R2\library\inc-I C:\Users\Hotriver\Desktop\新建文件夹\PortingContest\PortingContest\PortingContest_LAUNCHXL-CC2640R2_forlock\LiteOS_Kernel-master\projects\LAUNCHXL-CC2640R2-KEIL\RTE-I "D:\Program Files (x86)\Keil\MDK\PACK\TexasInstruments\CC13xxCC26xx\0.0.2\Device\Include"-I "D:\Program Files (x86)\Keil\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="517" -DRAM_SIZE_LEVEL_1 -DLAUNCHXL_CC2640R2-o .\los_api_sem.o --omf_browse .\los_api_sem.crf --depend .\los_api_sem.d)
+I (..\..\kernel\include\los_sem.h)(0x58DE76A0)
+I (..\..\kernel\include\los_base.h)(0x58DE76A0)
+I (..\..\kernel\link\keil\los_builddef.h)(0x58DE76A0)
+I (..\..\kernel\include\los_typedef.h)(0x5949296F)
+I (..\..\kernel\config\los_config.h)(0x591472E5)
+I (..\..\kernel\include\los_printf.h)(0x58DE76A0)
+I (D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\include\stdio.h)(0x55DB2B76)
+I (..\..\kernel\include\los_list.h)(0x58DE76A0)
+I (..\..\kernel\include\los_errno.h)(0x58DE76A0)
+I (..\..\kernel\include\los_task.h)(0x58DE76A0)
+I (..\..\kernel\include\los_sys.h)(0x58DE76A0)
+I (..\..\kernel\cpu\arm\cortex-m3\los_hwi.h)(0x58DE76A0)
+I (..\..\kernel\include\los_tick.h)(0x58DE76A0)
+I (..\..\kernel\include\los_event.h)(0x58DE76A0)
+I (..\..\kernel\base\include\los_base.ph)(0x58DE76A0)
+I (..\..\example\include\los_api_sem.h)(0x58DE76A0)
+I (..\..\example\include\los_demo_debug.h)(0x590C7220)
+I (D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\include\string.h)(0x55DB2B78)
+I (..\..\example\include\los_inspect_entry.h)(0x58DE76A0)
+F (..\..\example\api\los_api_static_mem.c)(0x58DE76A0)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\..\example\include -I..\..\kernel\include -I..\..\kernel\base\include -I..\..\kernel\link\keil -I..\..\kernel\cmsis -I..\..\kernel\config -I..\..\kernel\cpu\arm\cortex-m3 -I..\..\platform\LAUNCHXL-CC2640R2 -I..\..\platform\LAUNCHXL-CC2640R2\library\inc-I C:\Users\Hotriver\Desktop\新建文件夹\PortingContest\PortingContest\PortingContest_LAUNCHXL-CC2640R2_forlock\LiteOS_Kernel-master\projects\LAUNCHXL-CC2640R2-KEIL\RTE-I "D:\Program Files (x86)\Keil\MDK\PACK\TexasInstruments\CC13xxCC26xx\0.0.2\Device\Include"-I "D:\Program Files (x86)\Keil\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="517" -DRAM_SIZE_LEVEL_1 -DLAUNCHXL_CC2640R2-o .\los_api_static_mem.o --omf_browse .\los_api_static_mem.crf --depend .\los_api_static_mem.d)
+I (D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\include\stdio.h)(0x55DB2B76)
+I (..\..\kernel\include\los_membox.h)(0x58DE76A0)
+I (..\..\kernel\config\los_config.h)(0x591472E5)
+I (..\..\kernel\include\los_typedef.h)(0x5949296F)
+I (..\..\kernel\link\keil\los_builddef.h)(0x58DE76A0)
+I (..\..\kernel\include\los_printf.h)(0x58DE76A0)
+I (..\..\example\include\los_api_static_mem.h)(0x58DE76A0)
+I (..\..\example\include\los_demo_debug.h)(0x590C7220)
+I (D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\include\string.h)(0x55DB2B78)
+I (..\..\example\include\los_inspect_entry.h)(0x58DE76A0)
+F (..\..\example\api\los_api_systick.c)(0x58DE76A0)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\..\example\include -I..\..\kernel\include -I..\..\kernel\base\include -I..\..\kernel\link\keil -I..\..\kernel\cmsis -I..\..\kernel\config -I..\..\kernel\cpu\arm\cortex-m3 -I..\..\platform\LAUNCHXL-CC2640R2 -I..\..\platform\LAUNCHXL-CC2640R2\library\inc-I C:\Users\Hotriver\Desktop\新建文件夹\PortingContest\PortingContest\PortingContest_LAUNCHXL-CC2640R2_forlock\LiteOS_Kernel-master\projects\LAUNCHXL-CC2640R2-KEIL\RTE-I "D:\Program Files (x86)\Keil\MDK\PACK\TexasInstruments\CC13xxCC26xx\0.0.2\Device\Include"-I "D:\Program Files (x86)\Keil\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="517" -DRAM_SIZE_LEVEL_1 -DLAUNCHXL_CC2640R2-o .\los_api_systick.o --omf_browse .\los_api_systick.crf --depend .\los_api_systick.d)
+I (..\..\kernel\include\los_sys.h)(0x58DE76A0)
+I (..\..\kernel\include\los_base.h)(0x58DE76A0)
+I (..\..\kernel\link\keil\los_builddef.h)(0x58DE76A0)
+I (..\..\kernel\include\los_typedef.h)(0x5949296F)
+I (..\..\kernel\config\los_config.h)(0x591472E5)
+I (..\..\kernel\include\los_printf.h)(0x58DE76A0)
+I (D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\include\stdio.h)(0x55DB2B76)
+I (..\..\kernel\include\los_list.h)(0x58DE76A0)
+I (..\..\kernel\include\los_errno.h)(0x58DE76A0)
+I (..\..\kernel\cpu\arm\cortex-m3\los_hwi.h)(0x58DE76A0)
+I (..\..\kernel\include\los_task.h)(0x58DE76A0)
+I (..\..\kernel\include\los_tick.h)(0x58DE76A0)
+I (..\..\kernel\include\los_event.h)(0x58DE76A0)
+I (..\..\example\include\los_api_systick.h)(0x58DE76A0)
+I (..\..\example\include\los_demo_debug.h)(0x590C7220)
+I (D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\include\string.h)(0x55DB2B78)
+I (..\..\example\include\los_inspect_entry.h)(0x58DE76A0)
+F (..\..\example\api\los_api_task.c)(0x590C9539)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\..\example\include -I..\..\kernel\include -I..\..\kernel\base\include -I..\..\kernel\link\keil -I..\..\kernel\cmsis -I..\..\kernel\config -I..\..\kernel\cpu\arm\cortex-m3 -I..\..\platform\LAUNCHXL-CC2640R2 -I..\..\platform\LAUNCHXL-CC2640R2\library\inc-I C:\Users\Hotriver\Desktop\新建文件夹\PortingContest\PortingContest\PortingContest_LAUNCHXL-CC2640R2_forlock\LiteOS_Kernel-master\projects\LAUNCHXL-CC2640R2-KEIL\RTE-I "D:\Program Files (x86)\Keil\MDK\PACK\TexasInstruments\CC13xxCC26xx\0.0.2\Device\Include"-I "D:\Program Files (x86)\Keil\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="517" -DRAM_SIZE_LEVEL_1 -DLAUNCHXL_CC2640R2-o .\los_api_task.o --omf_browse .\los_api_task.crf --depend .\los_api_task.d)
+I (D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\include\math.h)(0x55DB2B7E)
+I (D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\include\time.h)(0x55DB2B80)
+I (..\..\kernel\include\los_task.h)(0x58DE76A0)
+I (..\..\kernel\include\los_base.h)(0x58DE76A0)
+I (..\..\kernel\link\keil\los_builddef.h)(0x58DE76A0)
+I (..\..\kernel\include\los_typedef.h)(0x5949296F)
+I (..\..\kernel\config\los_config.h)(0x591472E5)
+I (..\..\kernel\include\los_printf.h)(0x58DE76A0)
+I (D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\include\stdio.h)(0x55DB2B76)
+I (..\..\kernel\include\los_list.h)(0x58DE76A0)
+I (..\..\kernel\include\los_errno.h)(0x58DE76A0)
+I (..\..\kernel\include\los_sys.h)(0x58DE76A0)
+I (..\..\kernel\cpu\arm\cortex-m3\los_hwi.h)(0x58DE76A0)
+I (..\..\kernel\include\los_tick.h)(0x58DE76A0)
+I (..\..\kernel\include\los_event.h)(0x58DE76A0)
+I (..\..\example\include\los_api_task.h)(0x58DE76A0)
+I (..\..\example\include\los_demo_debug.h)(0x590C7220)
+I (D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\include\string.h)(0x55DB2B78)
+I (..\..\example\include\los_inspect_entry.h)(0x58DE76A0)
+F (..\..\example\api\los_api_timer.c)(0x58DE76A0)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\..\example\include -I..\..\kernel\include -I..\..\kernel\base\include -I..\..\kernel\link\keil -I..\..\kernel\cmsis -I..\..\kernel\config -I..\..\kernel\cpu\arm\cortex-m3 -I..\..\platform\LAUNCHXL-CC2640R2 -I..\..\platform\LAUNCHXL-CC2640R2\library\inc-I C:\Users\Hotriver\Desktop\新建文件夹\PortingContest\PortingContest\PortingContest_LAUNCHXL-CC2640R2_forlock\LiteOS_Kernel-master\projects\LAUNCHXL-CC2640R2-KEIL\RTE-I "D:\Program Files (x86)\Keil\MDK\PACK\TexasInstruments\CC13xxCC26xx\0.0.2\Device\Include"-I "D:\Program Files (x86)\Keil\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="517" -DRAM_SIZE_LEVEL_1 -DLAUNCHXL_CC2640R2-o .\los_api_timer.o --omf_browse .\los_api_timer.crf --depend .\los_api_timer.d)
+I (D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\include\stdio.h)(0x55DB2B76)
+I (..\..\kernel\include\los_swtmr.h)(0x58DE76A0)
+I (..\..\kernel\include\los_base.h)(0x58DE76A0)
+I (..\..\kernel\link\keil\los_builddef.h)(0x58DE76A0)
+I (..\..\kernel\include\los_typedef.h)(0x5949296F)
+I (..\..\kernel\config\los_config.h)(0x591472E5)
+I (..\..\kernel\include\los_printf.h)(0x58DE76A0)
+I (..\..\kernel\include\los_list.h)(0x58DE76A0)
+I (..\..\kernel\include\los_errno.h)(0x58DE76A0)
+I (..\..\kernel\include\los_task.h)(0x58DE76A0)
+I (..\..\kernel\include\los_sys.h)(0x58DE76A0)
+I (..\..\kernel\cpu\arm\cortex-m3\los_hwi.h)(0x58DE76A0)
+I (..\..\kernel\include\los_tick.h)(0x58DE76A0)
+I (..\..\kernel\include\los_event.h)(0x58DE76A0)
+I (D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\include\time.h)(0x55DB2B80)
+I (..\..\example\include\los_api_timer.h)(0x58DE76A0)
+I (..\..\example\include\los_demo_debug.h)(0x590C7220)
+I (D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\include\string.h)(0x55DB2B78)
+I (..\..\example\include\los_inspect_entry.h)(0x58DE76A0)
+F (..\..\example\api\los_cmsis_main.c)(0x58DE76A0)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\..\example\include -I..\..\kernel\include -I..\..\kernel\base\include -I..\..\kernel\link\keil -I..\..\kernel\cmsis -I..\..\kernel\config -I..\..\kernel\cpu\arm\cortex-m3 -I..\..\platform\LAUNCHXL-CC2640R2 -I..\..\platform\LAUNCHXL-CC2640R2\library\inc-I C:\Users\Hotriver\Desktop\新建文件夹\PortingContest\PortingContest\PortingContest_LAUNCHXL-CC2640R2_forlock\LiteOS_Kernel-master\projects\LAUNCHXL-CC2640R2-KEIL\RTE-I "D:\Program Files (x86)\Keil\MDK\PACK\TexasInstruments\CC13xxCC26xx\0.0.2\Device\Include"-I "D:\Program Files (x86)\Keil\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="517" -DRAM_SIZE_LEVEL_1 -DLAUNCHXL_CC2640R2-o .\los_cmsis_main.o --omf_browse .\los_cmsis_main.crf --depend .\los_cmsis_main.d)
+I (..\..\kernel\cmsis\cmsis_os.h)(0x58DE76A0)
+I (D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\include\stdint.h)(0x55DB2B80)
+I (D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\include\stddef.h)(0x55DB2B7E)
+F (..\..\example\api\los_demo_entry.c)(0x58DE76A0)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\..\example\include -I..\..\kernel\include -I..\..\kernel\base\include -I..\..\kernel\link\keil -I..\..\kernel\cmsis -I..\..\kernel\config -I..\..\kernel\cpu\arm\cortex-m3 -I..\..\platform\LAUNCHXL-CC2640R2 -I..\..\platform\LAUNCHXL-CC2640R2\library\inc-I C:\Users\Hotriver\Desktop\新建文件夹\PortingContest\PortingContest\PortingContest_LAUNCHXL-CC2640R2_forlock\LiteOS_Kernel-master\projects\LAUNCHXL-CC2640R2-KEIL\RTE-I "D:\Program Files (x86)\Keil\MDK\PACK\TexasInstruments\CC13xxCC26xx\0.0.2\Device\Include"-I "D:\Program Files (x86)\Keil\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="517" -DRAM_SIZE_LEVEL_1 -DLAUNCHXL_CC2640R2-o .\los_demo_entry.o --omf_browse .\los_demo_entry.crf --depend .\los_demo_entry.d)
+I (..\..\example\include\los_demo_entry.h)(0x58DE76A0)
+I (..\..\kernel\include\los_typedef.h)(0x5949296F)
+I (..\..\kernel\link\keil\los_builddef.h)(0x58DE76A0)
+I (..\..\example\include\los_demo_debug.h)(0x590C7220)
+I (D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\include\string.h)(0x55DB2B78)
+I (..\..\example\include\los_api_task.h)(0x58DE76A0)
+I (..\..\example\include\los_api_dynamic_mem.h)(0x58DE76A0)
+I (..\..\example\include\los_api_static_mem.h)(0x58DE76A0)
+I (..\..\example\include\los_api_interrupt.h)(0x58DE76A0)
+I (..\..\example\include\los_api_msgqueue.h)(0x58DE76A0)
+I (..\..\example\include\los_api_event.h)(0x58DE76A0)
+I (..\..\example\include\los_api_mutex.h)(0x58DE76A0)
+I (..\..\example\include\los_api_sem.h)(0x58DE76A0)
+I (..\..\example\include\los_api_timer.h)(0x58DE76A0)
+I (..\..\example\include\los_api_systick.h)(0x58DE76A0)
+I (..\..\example\include\los_api_list.h)(0x58DE76A0)
+I (..\..\kernel\include\los_task.h)(0x58DE76A0)
+I (..\..\kernel\include\los_base.h)(0x58DE76A0)
+I (..\..\kernel\config\los_config.h)(0x591472E5)
+I (..\..\kernel\include\los_printf.h)(0x58DE76A0)
+I (D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\include\stdio.h)(0x55DB2B76)
+I (..\..\kernel\include\los_list.h)(0x58DE76A0)
+I (..\..\kernel\include\los_errno.h)(0x58DE76A0)
+I (..\..\kernel\include\los_sys.h)(0x58DE76A0)
+I (..\..\kernel\cpu\arm\cortex-m3\los_hwi.h)(0x58DE76A0)
+I (..\..\kernel\include\los_tick.h)(0x58DE76A0)
+I (..\..\kernel\include\los_event.h)(0x58DE76A0)
+F (..\..\example\api\los_inspect_entry.c)(0x5909D1F3)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork --split_sections -I..\..\example\include -I..\..\kernel\include -I..\..\kernel\base\include -I..\..\kernel\link\keil -I..\..\kernel\cmsis -I..\..\kernel\config -I..\..\kernel\cpu\arm\cortex-m3 -I..\..\platform\LAUNCHXL-CC2640R2 -I..\..\platform\LAUNCHXL-CC2640R2\library\inc-I C:\Users\Hotriver\Desktop\新建文件夹\PortingContest\PortingContest\PortingContest_LAUNCHXL-CC2640R2_forlock\LiteOS_Kernel-master\projects\LAUNCHXL-CC2640R2-KEIL\RTE-I "D:\Program Files (x86)\Keil\MDK\PACK\TexasInstruments\CC13xxCC26xx\0.0.2\Device\Include"-I "D:\Program Files (x86)\Keil\MDK\ARM\CMSIS\Include"-D__UVISION_VERSION="517" -DRAM_SIZE_LEVEL_1 -DLAUNCHXL_CC2640R2-o .\los_inspect_entry.o --omf_browse .\los_inspect_entry.crf --depend .\los_inspect_entry.d)
+I (D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\include\string.h)(0x55DB2B78)
+I (..\..\example\include\los_inspect_entry.h)(0x58DE76A0)
+I (..\..\kernel\include\los_typedef.h)(0x5949296F)
+I (..\..\kernel\link\keil\los_builddef.h)(0x58DE76A0)
+I (..\..\kernel\include\los_task.h)(0x58DE76A0)
+I (..\..\kernel\include\los_base.h)(0x58DE76A0)
+I (..\..\kernel\config\los_config.h)(0x591472E5)
+I (..\..\kernel\include\los_printf.h)(0x58DE76A0)
+I (D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\include\stdio.h)(0x55DB2B76)
+I (..\..\kernel\include\los_list.h)(0x58DE76A0)
+I (..\..\kernel\include\los_errno.h)(0x58DE76A0)
+I (..\..\kernel\include\los_sys.h)(0x58DE76A0)
+I (..\..\kernel\cpu\arm\cortex-m3\los_hwi.h)(0x58DE76A0)
+I (..\..\kernel\include\los_tick.h)(0x58DE76A0)
+I (..\..\kernel\include\los_event.h)(0x58DE76A0)
+I (..\..\example\include\los_demo_debug.h)(0x590C7220)
+I (..\..\platform\LAUNCHXL-CC2640R2\los_bsp_adapter.h)(0x58DE76A0)
+I (..\..\platform\LAUNCHXL-CC2640R2\los_bsp_led.h)(0x594D26F3)
+I (..\..\platform\LAUNCHXL-CC2640R2\los_bsp_key.h)(0x590B3319)
+I (..\..\platform\LAUNCHXL-CC2640R2\los_bsp_uart.h)(0x58DE76A0)
+I (..\..\example\include\los_api_task.h)(0x58DE76A0)
+I (..\..\example\include\los_api_dynamic_mem.h)(0x58DE76A0)
+I (..\..\example\include\los_api_static_mem.h)(0x58DE76A0)
+I (..\..\example\include\los_api_interrupt.h)(0x58DE76A0)
+I (..\..\example\include\los_api_msgqueue.h)(0x58DE76A0)
+I (..\..\example\include\los_api_event.h)(0x58DE76A0)
+I (..\..\example\include\los_api_mutex.h)(0x58DE76A0)
+I (..\..\example\include\los_api_sem.h)(0x58DE76A0)
+I (..\..\example\include\los_api_timer.h)(0x58DE76A0)
+I (..\..\example\include\los_api_systick.h)(0x58DE76A0)
+I (..\..\example\include\los_api_list.h)(0x58DE76A0)

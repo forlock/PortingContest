@@ -1,0 +1,31 @@
+.\setup.o: ..\..\platform\LAUNCHXL-CC2640R2\library\driverlib\setup.c
+.\setup.o: ..\..\platform\LAUNCHXL-CC2640R2\library\driverlib\../inc/hw_types.h
+.\setup.o: D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\Bin\..\include\stdint.h
+.\setup.o: D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\Bin\..\include\stdbool.h
+.\setup.o: ..\..\platform\LAUNCHXL-CC2640R2\library\driverlib\../inc/../inc/hw_chip_def.h
+.\setup.o: ..\..\platform\LAUNCHXL-CC2640R2\library\driverlib\../inc/hw_memmap.h
+.\setup.o: ..\..\platform\LAUNCHXL-CC2640R2\library\driverlib\../inc/hw_adi.h
+.\setup.o: ..\..\platform\LAUNCHXL-CC2640R2\library\driverlib\../inc/hw_adi_2_refsys.h
+.\setup.o: ..\..\platform\LAUNCHXL-CC2640R2\library\driverlib\../inc/hw_adi_3_refsys.h
+.\setup.o: ..\..\platform\LAUNCHXL-CC2640R2\library\driverlib\../inc/hw_aon_ioc.h
+.\setup.o: ..\..\platform\LAUNCHXL-CC2640R2\library\driverlib\../inc/hw_aon_sysctl.h
+.\setup.o: ..\..\platform\LAUNCHXL-CC2640R2\library\driverlib\../inc/hw_aon_wuc.h
+.\setup.o: ..\..\platform\LAUNCHXL-CC2640R2\library\driverlib\../inc/hw_aux_wuc.h
+.\setup.o: ..\..\platform\LAUNCHXL-CC2640R2\library\driverlib\../inc/hw_ccfg.h
+.\setup.o: ..\..\platform\LAUNCHXL-CC2640R2\library\driverlib\../inc/hw_fcfg1.h
+.\setup.o: ..\..\platform\LAUNCHXL-CC2640R2\library\driverlib\../inc/hw_flash.h
+.\setup.o: ..\..\platform\LAUNCHXL-CC2640R2\library\driverlib\../inc/hw_prcm.h
+.\setup.o: ..\..\platform\LAUNCHXL-CC2640R2\library\driverlib\../inc/hw_vims.h
+.\setup.o: ..\..\platform\LAUNCHXL-CC2640R2\library\driverlib\aon_wuc.h
+.\setup.o: ..\..\platform\LAUNCHXL-CC2640R2\library\driverlib\../inc/hw_ints.h
+.\setup.o: ..\..\platform\LAUNCHXL-CC2640R2\library\driverlib\../inc/hw_aon_rtc.h
+.\setup.o: ..\..\platform\LAUNCHXL-CC2640R2\library\driverlib\interrupt.h
+.\setup.o: ..\..\platform\LAUNCHXL-CC2640R2\library\driverlib\../inc/hw_nvic.h
+.\setup.o: ..\..\platform\LAUNCHXL-CC2640R2\library\driverlib\debug.h
+.\setup.o: ..\..\platform\LAUNCHXL-CC2640R2\library\driverlib\cpu.h
+.\setup.o: ..\..\platform\LAUNCHXL-CC2640R2\library\driverlib\../inc/hw_cpu_scs.h
+.\setup.o: ..\..\platform\LAUNCHXL-CC2640R2\library\driverlib\../driverlib/rom.h
+.\setup.o: ..\..\platform\LAUNCHXL-CC2640R2\library\driverlib\aux_wuc.h
+.\setup.o: ..\..\platform\LAUNCHXL-CC2640R2\library\driverlib\chipinfo.h
+.\setup.o: ..\..\platform\LAUNCHXL-CC2640R2\library\driverlib\setup.h
+.\setup.o: ..\..\platform\LAUNCHXL-CC2640R2\library\driverlib\setup_rom.h

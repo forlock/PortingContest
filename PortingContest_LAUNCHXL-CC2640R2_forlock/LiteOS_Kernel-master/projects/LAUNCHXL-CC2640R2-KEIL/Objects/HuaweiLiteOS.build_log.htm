@@ -1,0 +1,191 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: μVision V5.17.0.0
+Copyright (C) 2015 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: 123 123, 123, LIC=YA39U-SCLY1-01ZP1-CJ6PW-77GGN-6FRAE
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Standard  Version: 5.17
+Toolchain Path:  D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 1 (build 61)
+Assembler:       Armasm.exe V5.06 update 1 (build 61)
+Linker/Locator:  ArmLink.exe V5.06 update 1 (build 61)
+Library Manager: ArmAr.exe V5.06 update 1 (build 61)
+Hex Converter:   FromElf.exe V5.06 update 1 (build 61)
+CPU DLL:         SARMCM3.DLL V5.17
+Dialog DLL:      DCM.DLL V1.13.4.0
+Target DLL:      UL2CM3.DLL V1.156.1.0
+Dialog DLL:      TCM.DLL V1.14.6.0
+ 
+<h2>Project:</h2>
+C:\Users\Hotriver\Desktop\新建文件夹\PortingContest\PortingContest\PortingContest_LAUNCHXL-CC2640R2_forlock\LiteOS_Kernel-master\projects\LAUNCHXL-CC2640R2-KEIL\HuaweiLiteOS.uvprojx
+Project File Date:  06/23/2017
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 1 (build 61)', folder: 'D:\Program Files (x86)\Keil\MDK\ARM\ARMCC\Bin'
+Build target 'LiteOS'
+compiling los_swtmr.c...
+..\..\kernel\base\core\los_swtmr.inc(38): error:  #5: cannot open source input file "los_swtmr.ph": No such file or directory
+  #include "los_swtmr.ph"
+..\..\kernel\base\core\los_swtmr.c: 0 warnings, 1 error
+compiling los_sys.c...
+..\..\kernel\base\core\los_sys.inc(38): error:  #5: cannot open source input file "los_sys.ph": No such file or directory
+  #include "los_sys.ph"
+..\..\kernel\base\core\los_sys.c: 0 warnings, 1 error
+compiling los_priqueue.c...
+..\..\kernel\base\core\los_priqueue.inc(38): error:  #5: cannot open source input file "los_priqueue.ph": No such file or directory
+  #include "los_priqueue.ph"
+..\..\kernel\base\core\los_priqueue.c: 0 warnings, 1 error
+compiling los_timeslice.c...
+..\..\kernel\base\core\los_timeslice.c(35): error:  #5: cannot open source input file "los_sys.ph": No such file or directory
+  #include "los_sys.ph"
+..\..\kernel\base\core\los_timeslice.c: 0 warnings, 1 error
+compiling los_task.c...
+..\..\kernel\base\core\los_task.inc(38): error:  #5: cannot open source input file "los_task.ph": No such file or directory
+  #include "los_task.ph"
+..\..\kernel\base\core\los_task.c: 0 warnings, 1 error
+compiling los_tick.c...
+..\..\kernel\base\core\los_tick.inc(38): error:  #5: cannot open source input file "los_tick.ph": No such file or directory
+  #include "los_tick.ph"
+..\..\kernel\base\core\los_tick.c: 0 warnings, 1 error
+compiling los_mux.c...
+..\..\kernel\base\ipc\los_mux.inc(38): error:  #5: cannot open source input file "los_mux.ph": No such file or directory
+  #include "los_mux.ph"
+..\..\kernel\base\ipc\los_mux.c: 0 warnings, 1 error
+compiling los_event.c...
+..\..\kernel\base\ipc\los_event.inc(38): error:  #5: cannot open source input file "los_event.ph": No such file or directory
+  #include "los_event.ph"
+..\..\kernel\base\ipc\los_event.c: 0 warnings, 1 error
+compiling los_queue.c...
+..\..\kernel\base\ipc\los_queue.inc(38): error:  #5: cannot open source input file "los_queue.ph": No such file or directory
+  #include "los_queue.ph"
+..\..\kernel\base\ipc\los_queue.c: 0 warnings, 1 error
+compiling los_sem.c...
+..\..\kernel\base\ipc\los_sem.inc(38): error:  #5: cannot open source input file "los_sem.ph": No such file or directory
+  #include "los_sem.ph"
+..\..\kernel\base\ipc\los_sem.c: 0 warnings, 1 error
+compiling los_memory.c...
+..\..\kernel\base\mem\los_memory.inc(38): error:  #5: cannot open source input file "los_memory.ph": No such file or directory
+  #include "los_memory.ph"
+..\..\kernel\base\mem\los_memory.c: 0 warnings, 1 error
+compiling los_membox.c...
+..\..\kernel\base\mem\los_membox.inc(38): error:  #5: cannot open source input file "los_membox.ph": No such file or directory
+  #include "los_membox.ph"
+..\..\kernel\base\mem\los_membox.c: 0 warnings, 1 error
+compiling los_memstat.c...
+..\..\kernel\base\mem\los_memstat.inc(38): error:  #5: cannot open source input file "los_memstat.ph": No such file or directory
+  #include "los_memstat.ph"
+..\..\kernel\base\mem\los_memstat.c: 0 warnings, 1 error
+compiling los_multipledlinkhead.c...
+..\..\kernel\base\mem\los_multipledlinkhead.inc(38): error:  #5: cannot open source input file "los_multipledlinkhead.ph": No such file or directory
+  #include "los_multipledlinkhead.ph"
+..\..\kernel\base\mem\los_multipledlinkhead.c: 0 warnings, 1 error
+compiling los_misc.c...
+..\..\kernel\base\misc\los_misc.c(35): error:  #5: cannot open source input file "los_base.ph": No such file or directory
+  #include "los_base.ph"
+..\..\kernel\base\misc\los_misc.c: 0 warnings, 1 error
+compiling los_config.c...
+..\..\kernel\config\los_config.c(35): error:  #5: cannot open source input file "los_sys.h": No such file or directory
+  #include "los_sys.h"
+..\..\kernel\config\los_config.c: 0 warnings, 1 error
+compiling los_hw.c...
+..\..\kernel\cpu\arm\cortex-m3\los_hw.c(35): error:  #5: cannot open source input file "los_base.h": No such file or directory
+  #include "los_base.h"
+..\..\kernel\cpu\arm\cortex-m3\los_hw.c: 0 warnings, 1 error
+compiling los_hw_tick.c...
+..\..\kernel\cpu\arm\cortex-m3\los_hw_tick.c(35): error:  #5: cannot open source input file "los_tick.ph": No such file or directory
+  #include "los_tick.ph"
+..\..\kernel\cpu\arm\cortex-m3\los_hw_tick.c: 0 warnings, 1 error
+compiling los_hwi.c...
+..\..\kernel\cpu\arm\cortex-m3\los_hwi.h(41): error:  #5: cannot open source input file "los_base.h": No such file or directory
+  #include "los_base.h"
+..\..\kernel\cpu\arm\cortex-m3\los_hwi.c: 0 warnings, 1 error
+assembling los_dispatch_keil.s...
+compiling cmsis_liteos.c...
+..\..\kernel\cmsis\cmsis_liteos.c(36): error:  #5: cannot open source input file "los_event.h": No such file or directory
+  #include "los_event.h"
+..\..\kernel\cmsis\cmsis_liteos.c: 0 warnings, 1 error
+compiling los_bsp_adapter.c...
+..\..\platform\LAUNCHXL-CC2640R2\los_bsp_adapter.c(20): error:  #5: cannot open source input file "los_tick.ph": No such file or directory
+  #include "los_tick.ph"
+..\..\platform\LAUNCHXL-CC2640R2\los_bsp_adapter.c: 0 warnings, 1 error
+compiling los_bsp_key.c...
+compiling los_bsp_led.c...
+compiling los_bsp_uart.c...
+assembling startup_keil.s...
+assembling startup_keil.s...
+compiling main.c...
+..\..\user\main.c(1): error:  #5: cannot open source input file "los_sys.h": No such file or directory
+  #include "los_sys.h"
+..\..\user\main.c: 0 warnings, 1 error
+compiling los_api_dynamic_mem.c...
+..\..\example\api\los_api_dynamic_mem.c(36): error:  #5: cannot open source input file "los_config.h": No such file or directory
+  #include "los_config.h"
+..\..\example\api\los_api_dynamic_mem.c: 0 warnings, 1 error
+compiling los_api_event.c...
+..\..\example\api\los_api_event.c(35): error:  #5: cannot open source input file "los_event.h": No such file or directory
+  #include "los_event.h"
+..\..\example\api\los_api_event.c: 0 warnings, 1 error
+compiling los_api_interrupt.c...
+..\..\example\api\los_api_interrupt.c(35): error:  #5: cannot open source input file "los_hwi.h": No such file or directory
+  #include "los_hwi.h"
+..\..\example\api\los_api_interrupt.c: 0 warnings, 1 error
+compiling los_api_list.c...
+..\..\example\api\los_api_list.c(35): error:  #5: cannot open source input file "los_list.h": No such file or directory
+  #include "los_list.h"
+..\..\example\api\los_api_list.c: 0 warnings, 1 error
+compiling los_api_msgqueue.c...
+..\..\example\api\los_api_msgqueue.c(35): error:  #5: cannot open source input file "los_base.h": No such file or directory
+  #include "los_base.h"
+..\..\example\api\los_api_msgqueue.c: 0 warnings, 1 error
+compiling los_api_mutex.c...
+..\..\example\api\los_api_mutex.c(35): error:  #5: cannot open source input file "los_mux.h": No such file or directory
+  #include "los_mux.h"
+..\..\example\api\los_api_mutex.c: 0 warnings, 1 error
+compiling los_api_sem.c...
+..\..\example\api\los_api_sem.c(35): error:  #5: cannot open source input file "los_sem.h": No such file or directory
+  #include "los_sem.h"
+..\..\example\api\los_api_sem.c: 0 warnings, 1 error
+compiling los_api_systick.c...
+..\..\example\api\los_api_systick.c(35): error:  #5: cannot open source input file "los_sys.h": No such file or directory
+  #include "los_sys.h"
+..\..\example\api\los_api_systick.c: 0 warnings, 1 error
+compiling los_api_static_mem.c...
+..\..\example\api\los_api_static_mem.c(36): error:  #5: cannot open source input file "los_membox.h": No such file or directory
+  #include "los_membox.h"
+..\..\example\api\los_api_static_mem.c: 0 warnings, 1 error
+compiling los_api_task.c...
+..\..\example\api\los_api_task.c(37): error:  #5: cannot open source input file "los_task.h": No such file or directory
+  #include "los_task.h"
+..\..\example\api\los_api_task.c: 0 warnings, 1 error
+compiling los_api_timer.c...
+..\..\example\api\los_api_timer.c(36): error:  #5: cannot open source input file "los_swtmr.h": No such file or directory
+  #include "los_swtmr.h"
+..\..\example\api\los_api_timer.c: 0 warnings, 1 error
+compiling los_cmsis_main.c...
+..\..\example\api\los_cmsis_main.c(1): error:  #5: cannot open source input file "cmsis_os.h": No such file or directory
+  #include "cmsis_os.h"
+..\..\example\api\los_cmsis_main.c: 0 warnings, 1 error
+compiling los_demo_entry.c...
+..\..\example\api\los_demo_entry.c(40): error:  #5: cannot open source input file "los_demo_entry.h": No such file or directory
+  #include "los_demo_entry.h"
+..\..\example\api\los_demo_entry.c: 0 warnings, 1 error
+compiling los_inspect_entry.c...
+..\..\example\api\los_inspect_entry.c(46): error:  #5: cannot open source input file "los_inspect_entry.h": No such file or directory
+  #include "los_inspect_entry.h"
+..\..\example\api\los_inspect_entry.c: 0 warnings, 1 error
+".\Objects\HuaweiLiteOS.axf" - 36 Error(s), 0 Warning(s).
+
+<h2>Collection of Component include folders:</h2>
+  C:\Users\Hotriver\Desktop\新建文件夹\PortingContest\PortingContest\PortingContest_LAUNCHXL-CC2640R2_forlock\LiteOS_Kernel-master\projects\LAUNCHXL-CC2640R2-KEIL\RTE
+  D:\Program Files (x86)\Keil\MDK\PACK\ARM\CMSIS\4.5.0\Device\ARM\ARMCM3\Include
+
+<h2>Collection of Component Files used:</h2>
+Target not created.
+Build Time Elapsed:  00:00:05
+</pre>
+</body>
+</html>

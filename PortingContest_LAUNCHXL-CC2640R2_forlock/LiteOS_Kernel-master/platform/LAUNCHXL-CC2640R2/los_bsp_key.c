@@ -1,44 +1,35 @@
 #include "los_bsp_key.h"
 
-#ifdef FRDM_KL25Z
-#include "MKL25Z4.h"
+#ifdef LAUNCHXL_CC2640R2
+#include <stdint.h>
 #endif
 
-#ifdef FRDM_KL26Z
-#include "MKL26Z4.h"
-#endif
-
-#if (defined FRDM_KL25Z) || (defined FRDM_KL26Z)
 void BSP_KEY_Init(void)
-{
-    SIM_SCGC5 |= SIM_SCGC5_PORTC_MASK; 
-	
-    PORTC_PCR3  &= ~(0x07<<8);            
-    PORTC_PCR3  |=	 0x01<<8;                  //GPIO mode
-    PORTC_PCR3  |=	 0x03;                     //pullup
-    GPIOC_PDDR  &= ~(1U << 3);                 //input
+{    
+#ifdef LAUNCHXL_CC2640R2
+    *((uint32_t*)(0x40082000 + 0x48))  |=  0x01;        // Enable gpio clock
+    *((uint32_t*)(0x40081000 + 0x34))   = 0x20004000;   // Enable DIO13 input     
+#endif
+    return;
 }
 
 uint16_t BSP_KEY_Get(void)
 {
     uint16_t KeyVal=LOS_GPIO_ERR;
-	
-    if(!((GPIOC_PDIR >> 3) & 1))
+
+#ifdef LAUNCHXL_CC2640R2	
+    if(!(*((uint32_t *)(0x40081000 + 0xc0)) & 0x00002000))    //DIO13
     {
         KeyVal = 0;
     }
+#endif
     return KeyVal;
 }
-#endif
 
 void LOS_EvbKeyInit(void)
 {
-
-#if (defined FRDM_KL25Z) || (defined FRDM_KL26Z)
     BSP_KEY_Init();
-#endif
 }
-
 
 /*****************************************************************************
  Function    : LOS_EvbGetKeyVal
@@ -51,12 +42,10 @@ unsigned int LOS_EvbGetKeyVal(int KeyNum)
 {
     unsigned int KeyVal = LOS_GPIO_ERR; 
 
-#if (defined FRDM_KL25Z) || (defined FRDM_KL26Z)	
     if(KeyNum == USER_KEY)
     {
         KeyVal = BSP_KEY_Get();
     }
-#endif
 	
 	return KeyVal;
 }
